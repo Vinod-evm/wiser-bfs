@@ -40,13 +40,24 @@
                   class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Upgrade
                   Now</span>
               </button>
-              <button class="ws_banner_dismiss"
+
+              <button
+                class="ws_banner_dismiss Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly"
+                aria-label="Dismiss notification" type="button"
                 onclick="document.getElementById('planBanner').style.display='none'">
-                <svg viewBox="0 0 20 20" fill="currentColor"
-                  width="16"
-                  height="16"><path
-                    d="M11.414 10l4.95-4.95a1 1 0 10-1.414-1.414L10 8.586 5.05 3.636a1 1 0 10-1.414 1.414L8.586 10l-4.95 4.95a1 1 0 101.414 1.414L10 11.414l4.95 4.95a1 1 0 001.414-1.414L11.414 10z" /></svg>
+                <span class="Polaris-Button__Icon"><span
+                    class="Polaris-Banner__icon--secondary">
+                    <span class="Polaris-Icon">
+                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                        fill="#5E4200"
+                        focusable="false" aria-hidden="true">
+                        <path
+                          d="M13.97 15.03a.75.75 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.75.75 0 0 0-1.06-1.06l-3.97 3.97-3.97-3.97a.75.75 0 0 0-1.06 1.06l3.97 3.97-3.97 3.97a.75.75 0 1 0 1.06 1.06l3.97-3.97 3.97 3.97Z"></path></svg>
+                    </span>
+                  </span>
+                </span>
               </button>
+
             </div>
           </div>
         </div>
@@ -359,7 +370,8 @@
       style="display: none;">
       <div class="Polaris-Modal-Dialog__Container"
         style="display: flex; justify-content: center; align-items: center;">
-        <div role="dialog" class="Polaris-Modal-Dialog">
+        <div role="dialog" class="Polaris-Modal-Dialog"
+          style="max-width: 800px; width: 100%;">
           <div class="Polaris-Modal-Dialog__Modal">
             <div class="Polaris-Box"
               style="padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
