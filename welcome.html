@@ -418,9 +418,10 @@
       }
     }
   });
-</script>
 
-<script>
+
+  // welcome video carousel slider
+
   function initializeCarouselSlider() {
     const track = document.getElementById("carouselTrack");
     const prevBtn = document.getElementById("prevSlide");
@@ -469,4 +470,48 @@
 
   // Auto-init on DOM ready
   document.addEventListener("DOMContentLoaded", initializeCarouselSlider);
+
+
+  function initIntegrationSlider() {
+    const slideContainer = document.querySelector('.ws_intrgaration_img_slide');
+    const slides = document.querySelectorAll('.ws_intrgaration_img_slide .ws_banner_img');
+    const dotsContainer = document.querySelector('.ws_slider_dots');
+
+    if (!slideContainer || slides.length === 0 || !dotsContainer) return;
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // Generate dots
+    dotsContainer.innerHTML = ''; // Clear if any
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateSlide();
+      });
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function updateSlide() {
+      slideContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    updateSlide(); // Initialize first slide
+
+    setInterval(autoSlide, 3000); // Auto slide every 3 sec
+  }
+
+  // Run after DOM is loaded
+  document.addEventListener('DOMContentLoaded', initIntegrationSlider);
 </script>
