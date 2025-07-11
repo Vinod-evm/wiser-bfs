@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/esm/styles.css" />
+    <link rel="stylesheet" href="assets/css/wiserglobal.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@13.9.5/build/esm/styles.css"/> -->
+    <script src="assets/js/wiserjs.js"></script>
+  </head>
+  <body>
+    <div class="Polaris-Page">
+      <div class="Polaris-Page__Content">
+        <div class="Polaris-Layout">
+          <div class="Polaris-Layout__Section ">
+            <div
+              class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding pad-left-0">
+              <h2 class="Polaris-Text--root Polaris-Text--headingLg">Get ready
+                to Wiser</h2>
+              <div class="Polaris-Text--root Polaris-Text--bodyLg"
+                style="margin-top: 4px;">
+                Follow the setup instruction or the video to enable Wiser app in
+                your store
+              </div>
+            </div>
+
+            <div
+              class="Polaris-LegacyCard Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+              <div class="Polaris-LegacyCard__Section ws_progress_box">
+                <div
+                  class="Polaris-Text--root Polaris-Text--headingMd ws_setup_guide">
+                  <span>Setup guide</span>
+                  <span class="ws_setup_togle"><svg width="24" height="24"
+                      viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.4361 14.736C17.2673 14.9046 17.0386 14.9992 16.8001 14.9992C16.5616 14.9992 16.3328 14.9046 16.1641 14.736L12.0001 10.572L7.83606 14.736C7.66545 14.895 7.43979 14.9816 7.20663 14.9774C6.97347 14.9733 6.75101 14.8789 6.58611 14.714C6.42122 14.5491 6.32676 14.3266 6.32265 14.0935C6.31854 13.8603 6.40508 13.6346 6.56406 13.464L11.3641 8.66403C11.5328 8.49549 11.7616 8.40082 12.0001 8.40082C12.2386 8.40082 12.4673 8.49549 12.6361 8.66403L17.4361 13.464C17.6046 13.6328 17.6993 13.8615 17.6993 14.1C17.6993 14.3385 17.6046 14.5673 17.4361 14.736Z"
+                        fill="#4A4A4A"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="Polaris-Text--root Polaris-Text--bodyLg">
+                  Enable Wiser app in Theme Editor to display the Wiser Widgets.
+                </div>
+                <div class="ws_progresstext">
+                  <div
+                    class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium ws_text_pro"
+                    id="completedText">0/3 Completed</div>
+                  <div class="ws_progressbar">
+                    <div class="ws_progressbar_fill" id="progressBar"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 1 -->
+              <div class="Polaris-LegacyCard__Section ws_seutp_steps"
+                id="ws_setupSteps">
+                <div class="ws_step active" id="step1">
+                  <div class="ws_step_header" onclick="toggleStep('step1')">
+                    <div class="ws_step_title">
+                      <div class="ws_circle" id="circle1"></div>
+                      <h4
+                        class="Polaris-Text--root Polaris-Text--headingMd">Embed
+                        App</h4>
+                    </div>
+                  </div>
+                  <div class="ws_step_body">
+                    <p class="Polaris-Text--root Polaris-Text--bodyLg">Enable
+                      Wiser app in Theme Editor to display the Wiser
+                      Widgets.</p>
+                    <button
+                      class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                      onclick="markStepComplete(1)">
+                      <span class="Polaris-Button__Content">Enable</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="ws_step" id="step2">
+                  <div class="ws_step_header" onclick="toggleStep('step2')">
+                    <div class="ws_step_title">
+                      <div class="ws_circle" id="circle2"></div>
+                      <h4 class="Polaris-Text--root Polaris-Text--headingMd">Add
+                        a Widget</h4>
+                    </div>
+                  </div>
+                  <div class="ws_step_body">
+                    <p class="Polaris-Text--root Polaris-Text--bodyLg">Add
+                      product recommendation widgets to your store.</p>
+                    <button
+                      class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                      onclick="markStepComplete(2)">
+                      <span class="Polaris-Button__Content">Add Widget</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="ws_step" id="step3">
+                  <div class="ws_step_header" onclick="toggleStep('step3')">
+                    <div class="ws_step_title">
+                      <div class="ws_circle" id="circle3"></div>
+                      <h4
+                        class="Polaris-Text--root Polaris-Text--headingMd">Customize
+                        Widgets</h4>
+                    </div>
+                  </div>
+                  <div class="ws_step_body">
+                    <p class="Polaris-Text--root Polaris-Text--bodyLg">Style
+                      your widgets to match your theme.</p>
+                    <button
+                      class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                      onclick="markStepComplete(3)">
+                      <span class="Polaris-Button__Content">Customize</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!-- end .Polaris-LegacyCard -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const track = document.getElementById("carouselTrack");
+  const prevBtn = document.getElementById("prevSlide");
+  const nextBtn = document.getElementById("nextSlide");
+
+  // Clone for infinite scroll
+  const slides = track.children;
+  const slideWidth = slides[0].offsetWidth + 16;
+
+  function scrollNext() {
+    track.appendChild(track.firstElementChild);
+    track.scrollLeft -= slideWidth;
+    track.style.transition = "none";
+    setTimeout(() => {
+      track.style.transition = "transform 0.4s ease-in-out";
+      track.scrollLeft += slideWidth;
+    }, 10);
+  }
+
+  function scrollPrev() {
+    track.insertBefore(track.lastElementChild, track.firstElementChild);
+    track.scrollLeft += slideWidth;
+    track.style.transition = "none";
+    setTimeout(() => {
+      track.style.transition = "transform 0.4s ease-in-out";
+      track.scrollLeft -= slideWidth;
+    }, 10);
+  }
+
+  nextBtn.addEventListener("click", scrollNext);
+  prevBtn.addEventListener("click", scrollPrev);
+</script>
