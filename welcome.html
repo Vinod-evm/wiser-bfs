@@ -264,7 +264,8 @@
                       <h4 class="Polaris-Text--headingMd">How To Setup
                         Widgets</h4>
                       <button
-                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter">
+                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                        onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
                         <span
                           class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Click
                           to Watch</span></button>
@@ -276,7 +277,8 @@
                       <h4 class="Polaris-Text--headingMd">How To Setup
                         Widgets</h4>
                       <button
-                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter">
+                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                        onclick="openVideoModal('https://www.youtube.com/embed/ysz5S6PUM-U')">
                         <span
                           class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Click
                           to Watch</span></button>
@@ -288,7 +290,8 @@
                       <h4 class="Polaris-Text--headingMd">Manual
                         Recommendations</h4>
                       <button
-                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter">
+                        class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                        onclick="openVideoModal('https://www.youtube.com/embed/ScMzIvxBSi4')">
                         <span
                           class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Click
                           to Watch</span></button>
@@ -349,6 +352,45 @@
 
       </div>
     </div>
+
+    <!-- Polaris Modal -->
+    <div id="videoModal" data-portal-id="modal-:customModal:"
+      class="p-theme-light Polaris-ThemeProvider--themeContainer"
+      style="display: none;">
+      <div class="Polaris-Modal-Dialog__Container"
+        style="display: flex; justify-content: center; align-items: center;">
+        <div role="dialog" class="Polaris-Modal-Dialog">
+          <div class="Polaris-Modal-Dialog__Modal">
+            <div class="Polaris-Box"
+              style="padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+              <h2 class="Polaris-Text--headingMd">Watch Video</h2>
+              <button
+                class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly"
+                aria-label="Close" type="button" aria-pressed="false"
+                onclick="closeVideoModal()">
+                <span class="Polaris-Button__Icon"><span class="Polaris-Icon">
+                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                      focusable="false" aria-hidden="true">
+                      <path
+                        d="M13.97 15.03a.75.75 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.75.75 0 0 0-1.06-1.06l-3.97 3.97-3.97-3.97a.75.75 0 0 0-1.06 1.06l3.97 3.97-3.97 3.97a.75.75 0 1 0 1.06 1.06l3.97-3.97 3.97 3.97Z"></path>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+
+            <div class="Polaris-Modal__Body" style="padding: 0 1rem 1rem;">
+              <div style="position: relative; padding-top: 56.25%; height: 0;">
+                <iframe id="videoFrame" src frameborder="0" allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Polaris-Backdrop" onclick="closeVideoModal()"></div>
+    </div>
+
   </body>
 </html>
 <script>
@@ -514,4 +556,16 @@
 
   // Run after DOM is loaded
   document.addEventListener('DOMContentLoaded', initIntegrationSlider);
+
+// modal js
+ function openVideoModal(videoUrl) {
+    document.getElementById('videoModal').style.display = 'block';
+    document.getElementById('videoFrame').src = videoUrl + '?autoplay=1';
+  }
+
+  function closeVideoModal() {
+    document.getElementById('videoModal').style.display = 'none';
+    document.getElementById('videoFrame').src = ''; // Stop video
+  }
+
 </script>

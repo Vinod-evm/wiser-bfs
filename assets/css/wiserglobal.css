@@ -429,6 +429,28 @@ img.ws_banner_img {
     background: #000;
 }
 
+.Polaris-Modal-Dialog__Container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(63, 63, 68, 0.7);
+    /* Polaris standard backdrop */
+}
+
+.Polaris-Modal-Dialog {
+    max-width: 640px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
 
 @media (max-width: 768px) {
     .ws_analitic_cards {
