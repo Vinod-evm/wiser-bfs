@@ -429,6 +429,19 @@ img.ws_banner_img {
     background: #000;
 }
 
+.ws_product_table thead th {
+    border-top: 1px solid #eeeeee;
+    background: #F7F7F7;
+}
+
+.ws_product_table tr:first-child td.Polaris-DataTable__Cell {
+    border-top: none;
+}
+
+.ws_product_table td.Polaris-DataTable__Cell {
+    border-top: 1px solid #eeeeee;
+}
+
 
 @media (max-width: 768px) {
     .ws_analitic_cards {
