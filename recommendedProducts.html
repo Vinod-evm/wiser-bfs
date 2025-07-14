@@ -1,77 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/css/esm/styles.css" />
-        <link rel="stylesheet" href="assets/css/wiserglobal.css" />
-        <script src="assets/js/wiserjs.js"></script>
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/esm/styles.css" />
+    <link rel="stylesheet" href="assets/css/wiserglobal.css" />
+    <script src="assets/js/wiserjs.js"></script>
+    <style>
+    .ws_product_list 
+ul.Polaris-ResourceList__List {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="Polaris-Page">
+      <div class="Polaris-Page__Content">
+        <div class="Polaris-Layout">
+          <div class="Polaris-Layout__Section">
+            <div
+              class="Polaris-Page-Header--isSingleRow Polaris-Page-Header--noBreadcrumbs Polaris-Page-Header--mediumTitle">
+              <div class="Polaris-Page-Header__Row">
+                <div
+                  class="Polaris-Page-Header__TitleWrapper Polaris-Page-Header__TitleWrapperExpand">
+                  <div
+                    class="Polaris-Header-Title__TitleWrapper">
+                    <h1 class="Polaris-Header-Title">
+                      <span
+                        class="Polaris-Text--root Polaris-Text--headingLg">Recommended
+                        Products</span>
+                    </h1>
+                  </div>
+                </div>
+                <div class="Polaris-ButtonGroup">
+                  <div class="Polaris-ButtonGroup__Item">
+                    <button
+                      class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText"
+                      type="button">
+                      <span class="Polaris-Button__Icon">
+                        <span class="Polaris-Icon">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"><path fill-rule="evenodd"
+                              d="M13 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-1.5 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" /><path
+                              fill-rule="evenodd"
+                              d="M10 4c-2.476 0-4.348 1.23-5.577 2.532a9.266 9.266 0 0 0-1.4 1.922 5.98 5.98 0 0 0-.37.818c-.082.227-.153.488-.153.728s.071.501.152.728c.088.246.213.524.371.818.317.587.784 1.27 1.4 1.922 1.229 1.302 3.1 2.532 5.577 2.532 2.476 0 4.348-1.23 5.577-2.532a9.265 9.265 0 0 0 1.4-1.922 5.98 5.98 0 0 0 .37-.818c.082-.227.153-.488.153-.728s-.071-.501-.152-.728a5.984 5.984 0 0 0-.371-.818 9.269 9.269 0 0 0-1.4-1.922c-1.229-1.302-3.1-2.532-5.577-2.532Zm-5.999 6.002v-.004c.004-.02.017-.09.064-.223a4.5 4.5 0 0 1 .278-.608 7.768 7.768 0 0 1 1.17-1.605c1.042-1.104 2.545-2.062 4.487-2.062 1.942 0 3.445.958 4.486 2.062a7.77 7.77 0 0 1 1.17 1.605c.13.24.221.447.279.608.047.132.06.203.064.223v.004c-.004.02-.017.09-.064.223a4.503 4.503 0 0 1-.278.608 7.768 7.768 0 0 1-1.17 1.605c-1.042 1.104-2.545 2.062-4.487 2.062-1.942 0-3.445-.958-4.486-2.062a7.766 7.766 0 0 1-1.17-1.605 4.5 4.5 0 0 1-.279-.608c-.047-.132-.06-.203-.064-.223Z" /></svg>
+                        </span>
+                      </span>
+                      <span
+                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">View
+                        All</span>
+                    </button>
+                  </div>
+                  <div class="Polaris-ButtonGroup__Item">
+                    <button
+                      class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
+                      type="button">
+                      <span class="Polaris-Button__Icon">
+                        <span class="Polaris-Icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                              d="M10.75 4.25a.75.75 0 0 0-1.5 0v6.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72v-6.69Z" />
+                            <path
+                              d="M16.5 13.75a.75.75 0 0 0-1.5 0v.8a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-.8a.75.75 0 0 0-1.5 0v.8a2.25 2.25 0 0 0 2.25 2.25h8.5a2.25 2.25 0 0 0 2.25-2.25v-.8Z" />
+                          </svg>
+                        </span>
+                      </span>
+                      <span
+                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Import
+                        CSV</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ws_product_search_for_edit">
+            <div class="Polaris-Layout__Section">
+              <div class="Polaris-LegacyCard">
+                <div
+                  class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding">
+                  <h2 class="Polaris-Text--headingMd">Choose The
+                    Product
+                  </h2>
+                </div>
+                <div
+                  class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
+                  <p>Choose the Product from the search box here
+                    to
+                    add
+                    handpicked
+                    recommended products in it. After selecting
+                    the
+                    product,
+                    you
+                    can search for products to be added in its
+                    recommended
+                    products section. Just 2 easy steps and its
+                    done.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        <div class="Polaris-Page">
-            <div class="Polaris-Box"
-                style="--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-start-md:var(--p-space-600);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-block-end-md:var(--p-space-600);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-start-sm:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-400);--pc-box-padding-inline-end-sm:var(--p-space-0);position:relative">
-                <div
-                    class="Polaris-Page-Header--isSingleRow Polaris-Page-Header--noBreadcrumbs Polaris-Page-Header--mediumTitle">
-                    <div class="Polaris-Page-Header__Row">
+            <div class="Polaris-Layout__Section">
+              <div class="Polaris-LegacyCard">
+                <div class="Polaris-Tabs__Outer">
+                  <div class="Polaris-Box"
+                    style="--pc-box-padding-block-start-md:var(--p-space-200);--pc-box-padding-block-end-md:var(--p-space-200);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
+
+                    <!-- Tabs -->
+                    <ul class="Polaris-Tabs" role="tablist">
+                      <li class="Polaris-Tabs__TabContainer"
+                        role="presentation">
+                        <button id="Search-By-Product-Title"
+                          class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active recom_pro_search_tabs"
+                          role="tab" type="button"
+                          aria-controls="search-by-title-panel"
+                          tabindex="0" aria-selected="true">
+                          <span
+                            class="Polaris-Text Polaris-Text--bodySm Polaris-Text--medium">
+                            Search By Product Title
+                          </span>
+                        </button>
+                      </li>
+                      <li class="Polaris-Tabs__TabContainer"
+                        role="presentation">
+                        <button id="Search-By-SKU"
+                          class="Polaris-Tabs__Tab recom_pro_search_tabs"
+                          role="tab" type="button"
+                          aria-controls="search-by-sku-panel"
+                          tabindex="-1" aria-selected="false">
+                          <span
+                            class="Polaris-Text Polaris-Text--bodySm Polaris-Text--medium">
+                            Search By SKU
+                          </span>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Panels -->
+                  <div
+                    class="Polaris-LegacyCard__Section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                    <div id="search-by-title-panel"
+                      class="Polaris-Tabs__Panel recom_tab_serch-panel">
+                      <div class="Polaris-Connected">
                         <div
-                            class="Polaris-Page-Header__TitleWrapper Polaris-Page-Header__TitleWrapperExpand">
-                            <div class="Polaris-Header-Title__TitleWrapper">
-                                <h1 class="Polaris-Header-Title">
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--headingLg">Recommended
-                                        Products</span>
-                                </h1>
+                          class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                          <div
+                            class="Polaris-TextField Polaris-TextField--hasClearButton Polaris-TextField--hasValue">
+                            <div class="Polaris-TextField__Prefix">
+                              <span
+                                class="Polaris-Icon Polaris-Icon--toneBase Polaris-TextField__Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"><path fill-rule="evenodd"
+                                    d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" /></svg>
+                              </span>
                             </div>
+                            <input id="productSearchInput"
+                              class="Polaris-TextField__Input" type="text"
+                              placeholder="Search product title">
+                            <div class="Polaris-TextField__Backdrop"></div>
+                          </div>
                         </div>
-                        <div class="Polaris-ButtonGroup">
-                            <div class="Polaris-ButtonGroup__Item">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText"
-                                    type="button">
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">View
-                                        All</span>
-                                </button>
-                            </div>
-                            <div class="Polaris-ButtonGroup__Item">
-                                <button
-                                    class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter"
-                                    type="button">
-                                    <span class="Polaris-Button__Icon">
-                                        <span class="Polaris-Icon">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 20 20"><path
-                                                    d="M10.75 4.25a.75.75 0 0 0-1.5 0v6.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72v-6.69Z" /><path
-                                                    d="M16.5 13.75a.75.75 0 0 0-1.5 0v.8a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75v-.8a.75.75 0 0 0-1.5 0v.8a2.25 2.25 0 0 0 2.25 2.25h8.5a2.25 2.25 0 0 0 2.25-2.25v-.8Z" /></svg>
-                                        </span>
-                                    </span>
-                                    <span
-                                        class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Import
-                                        CSV</span>
-                                </button>
-                            </div>
-                        </div>
+                      </div>
+                      <div
+                        class="ws_product_list"><div
+                          class="Polaris-Box"
+                          style="--pc-box-padding-block-start-xs:var(--p-space-500);--pc-box-padding-block-end-xs:var(--p-space-500);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0)"><div
+                            class="Polaris-BlockStack"
+                            style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column"><div
+                              class="Polaris-EmptyState__ImageContainer">
+                              <svg width="64" height="64" viewBox="0 0 64 64"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M39.4336 42.8257C35.8798 45.52 31.4356 46.7647 26.9993 46.3083C22.563 45.8518 18.4654 43.7282 15.5346 40.3667C12.6039 37.0052 11.0585 32.6564 11.2109 28.1993C11.3633 23.7422 13.202 19.5091 16.3556 16.3556C19.5091 13.2021 23.7421 11.3634 28.1992 11.211C32.6564 11.0586 37.0051 12.6039 40.3667 15.5347C43.7282 18.4654 45.8518 22.5631 46.3082 26.9994C46.7647 31.4357 45.5199 35.8798 42.8256 39.4337L52.096 48.7041C52.3318 48.9238 52.5209 49.1887 52.6521 49.4831C52.7833 49.7775 52.8538 50.0953 52.8595 50.4176C52.8652 50.7398 52.8059 51.0599 52.6852 51.3588C52.5645 51.6576 52.3848 51.9291 52.1569 52.157C51.929 52.3849 51.6576 52.5645 51.3587 52.6853C51.0599 52.806 50.7398 52.8652 50.4175 52.8596C50.0953 52.8539 49.7775 52.7833 49.4831 52.6522C49.1887 52.521 48.9237 52.3319 48.704 52.0961L39.4336 42.8257ZM41.6 28.8001C41.6 32.1948 40.2514 35.4506 37.851 37.851C35.4505 40.2515 32.1948 41.6001 28.8 41.6001C25.4052 41.6001 22.1495 40.2515 19.749 37.851C17.3486 35.4506 16 32.1948 16 28.8001C16 25.4053 17.3486 22.1496 19.749 19.7491C22.1495 17.3486 25.4052 16.0001 28.8 16.0001C32.1948 16.0001 35.4505 17.3486 37.851 19.7491C40.2514 22.1496 41.6 25.4053 41.6 28.8001Z"
+                                  fill="#B5B5B5" />
+                              </svg>
+                              <div
+                                class="Polaris-EmptyState__SkeletonImage Polaris-EmptyState--loaded"></div></div><div
+                              class="Polaris-Box"
+                              style="--pc-box-max-width:400px"><div
+                                class="Polaris-BlockStack"
+                                style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column"><div
+                                  class="Polaris-Box"
+                                  style="--pc-box-padding-block-end-xs:var(--p-space-400)"><div
+                                    class="Polaris-Box"
+                                    style="--pc-box-padding-block-end-xs:var(--p-space-150)"><p
+                                      class="Polaris-Text--root Polaris-Text--headingMd Polaris-Text--block Polaris-Text--center">No
+                                      Products found</p></div><span
+                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--block Polaris-Text--center"><p>Search
+                                      for products and add them to your
+                                      list</p></span></div>
+                              </div></div></div></div></div>
+
                     </div>
+
+                    <div id="search-by-sku-panel"
+                      class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden recom_tab_serch-panel">
+                      <div class="Polaris-Connected">
+                        <div
+                          class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                          <div
+                            class="Polaris-TextField Polaris-TextField--hasClearButton Polaris-TextField--hasValue">
+                            <div class="Polaris-TextField__Prefix">
+                              <span
+                                class="Polaris-Icon Polaris-Icon--toneBase Polaris-TextField__Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"><path fill-rule="evenodd"
+                                    d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" /></svg>
+                              </span>
+                            </div>
+                            <input id="productSearchInput"
+                              class="Polaris-TextField__Input" type="text"
+                              placeholder="Search sku">
+                            <div class="Polaris-TextField__Backdrop"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ws_product_list"><div
+                          class="Polaris-Box"
+                          style="--pc-box-padding-block-start-xs:var(--p-space-500);--pc-box-padding-block-end-xs:var(--p-space-500);--pc-box-padding-inline-start-xs:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-0)"><div
+                            class="Polaris-BlockStack"
+                            style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column"><div
+                              class="Polaris-EmptyState__ImageContainer">
+                              <svg width="64" height="64" viewBox="0 0 64 64"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M39.4336 42.8257C35.8798 45.52 31.4356 46.7647 26.9993 46.3083C22.563 45.8518 18.4654 43.7282 15.5346 40.3667C12.6039 37.0052 11.0585 32.6564 11.2109 28.1993C11.3633 23.7422 13.202 19.5091 16.3556 16.3556C19.5091 13.2021 23.7421 11.3634 28.1992 11.211C32.6564 11.0586 37.0051 12.6039 40.3667 15.5347C43.7282 18.4654 45.8518 22.5631 46.3082 26.9994C46.7647 31.4357 45.5199 35.8798 42.8256 39.4337L52.096 48.7041C52.3318 48.9238 52.5209 49.1887 52.6521 49.4831C52.7833 49.7775 52.8538 50.0953 52.8595 50.4176C52.8652 50.7398 52.8059 51.0599 52.6852 51.3588C52.5645 51.6576 52.3848 51.9291 52.1569 52.157C51.929 52.3849 51.6576 52.5645 51.3587 52.6853C51.0599 52.806 50.7398 52.8652 50.4175 52.8596C50.0953 52.8539 49.7775 52.7833 49.4831 52.6522C49.1887 52.521 48.9237 52.3319 48.704 52.0961L39.4336 42.8257ZM41.6 28.8001C41.6 32.1948 40.2514 35.4506 37.851 37.851C35.4505 40.2515 32.1948 41.6001 28.8 41.6001C25.4052 41.6001 22.1495 40.2515 19.749 37.851C17.3486 35.4506 16 32.1948 16 28.8001C16 25.4053 17.3486 22.1496 19.749 19.7491C22.1495 17.3486 25.4052 16.0001 28.8 16.0001C32.1948 16.0001 35.4505 17.3486 37.851 19.7491C40.2514 22.1496 41.6 25.4053 41.6 28.8001Z"
+                                  fill="#B5B5B5" />
+                              </svg>
+                              <div
+                                class="Polaris-EmptyState__SkeletonImage Polaris-EmptyState--loaded"></div></div><div
+                              class="Polaris-Box"
+                              style="--pc-box-max-width:400px"><div
+                                class="Polaris-BlockStack"
+                                style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column"><div
+                                  class="Polaris-Box"
+                                  style="--pc-box-padding-block-end-xs:var(--p-space-400)"><div
+                                    class="Polaris-Box"
+                                    style="--pc-box-padding-block-end-xs:var(--p-space-150)"><p
+                                      class="Polaris-Text--root Polaris-Text--headingMd Polaris-Text--block Polaris-Text--center">No
+                                      Products found</p></div><span
+                                    class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--block Polaris-Text--center"><p>Search
+                                      for products and add them to your
+                                      list</p></span></div>
+                              </div></div></div></div></div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div class="Polaris-LegacyCard">
-                <div
-                    class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding">
-                    <h2 class="Polaris-Text--headingMd">Choose The Product</h2>
-                </div>
-                <div
-                    class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
-                    <p>Choose the Product from the search box here to add
-                        handpicked
-                        recommended products in it. After selecting the product,
-                        you
-                        can search for products to be added in its recommended
-                        products section. Just 2 easy steps and its done.</p>
-                </div>
-            </div>
-        </div>
+          </div>
+
+
+
     </body>
-</html>
+  </html>
+  <script>
+  document.querySelectorAll('.recom_pro_search_tabs').forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs
+      document.querySelectorAll('.recom_pro_search_tabs').forEach(t => {
+        t.classList.remove('Polaris-Tabs__Tab--active');
+        t.setAttribute('aria-selected', 'false');
+        t.setAttribute('tabindex', '-1');
+      });
+
+      // Hide all tab panels
+      document.querySelectorAll('.recom_tab_serch-panel').forEach(panel => {
+        panel.classList.add('Polaris-Tabs__Panel--hidden');
+      });
+
+      // Activate clicked tab
+      tab.classList.add('Polaris-Tabs__Tab--active');
+      tab.setAttribute('aria-selected', 'true');
+      tab.setAttribute('tabindex', '0');
+
+      // Show corresponding panel
+      const panelId = tab.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+      if (panel) {
+        panel.classList.remove('Polaris-Tabs__Panel--hidden');
+      }
+    });
+  });
+
+
+const input = document.getElementById('productSearchInput');
+const resultContainer = document.querySelector('#search-by-title-panel .ws_product_list');
+
+input.addEventListener('input', function () {
+  const query = input.value.trim().toLowerCase();
+
+  if (query && query.length > 2) {
+    // Replace this with actual data filtering logic
+    const matched = true; // Set this to false to test the "no results" state
+
+    if (matched) {
+      resultContainer.innerHTML = `
+       <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+        <ul class="Polaris-ResourceList__List" style="list-style: none; padding: 0; margin: 0;">
+          <li class="Polaris-ResourceItem">
+            <div class="Polaris-LegacyCard" style="padding: 12px">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <!-- Product thumbnail and title -->
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="https://burst.shopifycdn.com/photos/freelance-designer-working-on-laptop.jpg?width=746" alt="Product" style="width: 35px; height: 35px; border-radius: 4px; object-fit: cover;">
+                <span class="Polaris-Text Polaris-Text--bodyMd Polaris-Text--medium">Young stylish girl model in casual summer clothes</span>
+              </div>
+
+              <!-- Edit button -->
+              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                <span class="Polaris-Button__Icon">
+                  <span class="Polaris-Icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z"/></svg>
+                  </span>
+                </span>
+                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Edit</span>
+              </button>
+            </div>
+            </div>
+          </li>
+           <li class="Polaris-ResourceItem">
+            <div class="Polaris-LegacyCard" style="padding: 12px">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <!-- Product thumbnail and title -->
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="https://burst.shopifycdn.com/photos/freelance-designer-working-on-laptop.jpg?width=746" alt="Product" style="width: 35px; height: 35px; border-radius: 4px; object-fit: cover;">
+                <span class="Polaris-Text Polaris-Text--bodyMd Polaris-Text--medium">Young stylish girl model in casual summer clothes</span>
+              </div>
+
+              <!-- Edit button -->
+              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button">
+                <span class="Polaris-Button__Icon">
+                  <span class="Polaris-Icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z"/></svg>
+                  </span>
+                </span>
+                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Edit</span>
+              </button>
+            </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      `;
+    } else {
+      resultContainer.innerHTML = document.querySelector('.recom_tab_serch-panel .Polaris-EmptyState__ImageContainer').parentElement.outerHTML;
+    }
+  } else {
+    resultContainer.innerHTML = ''; // Clear if input too short
+  }
+});
+
+</script>
