@@ -6,14 +6,7 @@
     <link rel="stylesheet" href="assets/css/esm/styles.css" />
     <link rel="stylesheet" href="assets/css/wiserglobal.css" />
     <script src="assets/js/wiserjs.js"></script>
-    <style>
-    .ws_product_list 
-ul.Polaris-ResourceList__List {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-    </style>
+
   </head>
   <body>
    <div class="Polaris-Page">
@@ -81,34 +74,43 @@ ul.Polaris-ResourceList__List {
          </div>
       </div>
    </div>
-
-      <div class="Polaris-Layout__Section ws_edit_product_banner" style="display:none">
-         <div class="Polaris-LegacyCard">
-            <div
-               class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding">
-               <h2 class="Polaris-Text--headingMd">Choose The
-                  Product
-               </h2>
-            </div>
-            <div
-               class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
-               <p>Choose the Product from the search box here
-                  to
-                  add
-                  handpicked
-                  recommended products in it. After selecting
-                  the
-                  product,
-                  you
-                  can search for products to be added in its
-                  recommended
-                  products section. Just 2 easy steps and its
-                  done.
-               </p>
+      <div class="Polaris-Layout__Section ws_add_product_banner" >
+            <div class="Polaris-Grid">
+               <div class="Polaris-Grid-Cell Polaris-Grid-Cell--cell_6ColumnXs Polaris-Grid-Cell--cell_4ColumnSm Polaris-Grid-Cell--cell_4ColumnMd Polaris-Grid-Cell--cell_7ColumnLg Polaris-Grid-Cell--cell_7ColumnXl">
+                  <div class="Polaris-LegacyCard">
+                     <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding Polaris-LegacyCard__FirstSectionPadding">
+                       <div class="ws_edited_item">
+                        <div class="ws_edited_media">
+                          <img src="assets/images/Image.png">
+                        </div>
+                        <div class="ws_edited_product-ttl">
+                          <span class="Polaris-Text--root Polaris-Text--bodyLg  Polaris-Text--medium">Young stylish girl model in casual summer clothes</span>
+                          <span class="Polaris-Text--root Polaris-Text--bodyMd  Polaris-Text--semibold">$120.00</span>
+                        </div>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="Polaris-Grid-Cell Polaris-Grid-Cell--cell_6ColumnXs Polaris-Grid-Cell--cell_2ColumnSm Polaris-Grid-Cell--cell_2ColumnMd Polaris-Grid-Cell--cell_5ColumnLg Polaris-Grid-Cell--cell_5ColumnXl">
+                  <div class="Polaris-LegacyCard">  
+                     <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding Polaris-LegacyCard__FirstSectionPadding">
+                      <div class="ws_create_product">
+                      <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                     <span class="Polaris-Button__Icon">
+                        <span class="Polaris-Icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M10.75 5.75c0-.414-.336-.75-.75-.75s-.75.336-.75.75v3.5h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5Z"/>
+                          </svg>
+                        </span>
+                     </span>
+                     <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Create Product Recommendations Set</span>
+                  </button>
+                  </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
-      </div>
-      
 
       <div class="Polaris-Layout__Section">
          <div class="Polaris-LegacyCard">
@@ -120,9 +122,9 @@ ul.Polaris-ResourceList__List {
                      <li class="Polaris-Tabs__TabContainer"
                         role="presentation">
                         <button id="Search-By-Product-Title"
-                           class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active recom_pro_search_tabs"
+                           class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active add_recom_pro_search_tabs"
                            role="tab" type="button"
-                           aria-controls="search-by-title-panel"
+                           aria-controls="add_search-by-title-panel"
                            tabindex="0" aria-selected="true">
                         <span
                            class="Polaris-Text Polaris-Text--bodySm Polaris-Text--medium">
@@ -133,7 +135,7 @@ ul.Polaris-ResourceList__List {
                      <li class="Polaris-Tabs__TabContainer"
                         role="presentation">
                         <button id="Search-By-SKU"
-                           class="Polaris-Tabs__Tab recom_pro_search_tabs"
+                           class="Polaris-Tabs__Tab add_recom_pro_search_tabs"
                            role="tab" type="button"
                            aria-controls="search-by-sku-panel"
                            tabindex="-1" aria-selected="false">
@@ -148,8 +150,8 @@ ul.Polaris-ResourceList__List {
                <!-- Panels -->
                <div
                   class="Polaris-LegacyCard__Section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
-                  <div id="search-by-title-panel"
-                     class="Polaris-Tabs__Panel recom_tab_serch-panel">
+                  <div id="add_search-by-title-panel"
+                     class="Polaris-Tabs__Panel add_recom_tab_serch-panel">
                      <div class="Polaris-Connected">
                         <div
                            class="Polaris-Connected__Item Polaris-Connected__Item--primary">
@@ -223,7 +225,7 @@ ul.Polaris-ResourceList__List {
                      </div>
                   </div>
                   <div id="search-by-sku-panel"
-                     class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden recom_tab_serch-panel">
+                     class="Polaris-Tabs__Panel Polaris-Tabs__Panel--hidden add_recom_tab_serch-panel">
                      <div class="Polaris-Connected">
                         <div
                            class="Polaris-Connected__Item Polaris-Connected__Item--primary">
@@ -303,7 +305,195 @@ ul.Polaris-ResourceList__List {
          <!-- edited product list -->
           
 
-         
+         <div class="Polaris-Layout__Section">
+            <div class="Polaris-LegacyCard">
+                <div class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                    <h2 class="Polaris-Text--root Polaris-Text--headingMd">Added Products</h2>
+                </div>
+                <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding pad-top-0">
+                    <ul class="ws_added_product_list">
+                        <li>
+                            <div class="Polaris-LegacyCard">
+                                <div class="ws_added_product_box">
+                                    <div class="ws_added_product-image">
+                                            <img alt="Black choker necklace" src="https://naveen-demotest.myshopify.com/cdn/shop/files/2014_08_10_Lana_Look35_19.jpg?v=1751027297&width=823">
+                                    </div>
+                                    <div class="ws_added_product_con">
+                                        <div class="added-badge">
+                                            <span class="Polaris-Badge Polaris-Badge--toneSuccess">
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm">Added</span>
+                                            </span>
+                                        </div>
+                                        <div class="ws-added_text_btn">
+                                            <span class="Polaris-Text--root Polaris-Text--bodyLg ws_added_product_ttl">Young stylish girl model in casual summer clothes</span>
+                                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button">
+                                                <span class="Polaris-Button__Icon">
+                                                    <span class="Polaris-Icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <path d="M11.5 8.25a.75.75 0 0 1 .75.75v4.25a.75.75 0 0 1-1.5 0v-4.25a.75.75 0 0 1 .75-.75Z"/>
+                                                    <path d="M9.25 9a.75.75 0 0 0-1.5 0v4.25a.75.75 0 0 0 1.5 0v-4.25Z"/>
+                                                    <path fill-rule="evenodd" d="M7.25 5.25a2.75 2.75 0 0 1 5.5 0h3a.75.75 0 0 1 0 1.5h-.75v5.45c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311c-.642.327-1.482.327-3.162.327h-.4c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311c-.327-.642-.327-1.482-.327-3.162v-5.45h-.75a.75.75 0 0 1 0-1.5h3Zm1.5 0a1.25 1.25 0 1 1 2.5 0h-2.5Zm-2.25 1.5h7v5.45c0 .865-.001 1.423-.036 1.848-.033.408-.09.559-.128.633a1.5 1.5 0 0 1-.655.655c-.074.038-.225.095-.633.128-.425.035-.983.036-1.848.036h-.4c-.865 0-1.423-.001-1.848-.036-.408-.033-.559-.09-.633-.128a1.5 1.5 0 0 1-.656-.655c-.037-.074-.094-.225-.127-.633-.035-.425-.036-.983-.036-1.848v-5.45Z"/>
+                                                </svg>
+                                                    </span>
+                                                </span>
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="Polaris-LegacyCard">
+                                <div class="ws_added_product_box">
+                                    <div class="ws_added_product-image">
+                                            <img alt="Black choker necklace" src="https://naveen-demotest.myshopify.com/cdn/shop/files/2014_08_10_Lana_Look35_19.jpg?v=1751027297&width=823">
+                                    </div>
+                                    <div class="ws_added_product_con">
+                                        <div class="added-badge">
+                                            <span class="Polaris-Badge Polaris-Badge--toneSuccess">
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm">Added</span>
+                                            </span>
+                                        </div>
+                                        <div class="ws-added_text_btn">
+                                            <span class="Polaris-Text--root Polaris-Text--bodyLg ws_added_product_ttl">Young stylish girl model in casual summer clothes</span>
+                                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button">
+                                                <span class="Polaris-Button__Icon">
+                                                    <span class="Polaris-Icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <path d="M11.5 8.25a.75.75 0 0 1 .75.75v4.25a.75.75 0 0 1-1.5 0v-4.25a.75.75 0 0 1 .75-.75Z"/>
+                                                    <path d="M9.25 9a.75.75 0 0 0-1.5 0v4.25a.75.75 0 0 0 1.5 0v-4.25Z"/>
+                                                    <path fill-rule="evenodd" d="M7.25 5.25a2.75 2.75 0 0 1 5.5 0h3a.75.75 0 0 1 0 1.5h-.75v5.45c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311c-.642.327-1.482.327-3.162.327h-.4c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311c-.327-.642-.327-1.482-.327-3.162v-5.45h-.75a.75.75 0 0 1 0-1.5h3Zm1.5 0a1.25 1.25 0 1 1 2.5 0h-2.5Zm-2.25 1.5h7v5.45c0 .865-.001 1.423-.036 1.848-.033.408-.09.559-.128.633a1.5 1.5 0 0 1-.655.655c-.074.038-.225.095-.633.128-.425.035-.983.036-1.848.036h-.4c-.865 0-1.423-.001-1.848-.036-.408-.033-.559-.09-.633-.128a1.5 1.5 0 0 1-.656-.655c-.037-.074-.094-.225-.127-.633-.035-.425-.036-.983-.036-1.848v-5.45Z"/>
+                                                </svg>
+                                                    </span>
+                                                </span>
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="Polaris-LegacyCard">
+                                <div class="ws_added_product_box">
+                                    <div class="ws_added_product-image">
+                                            <img alt="Black choker necklace" src="https://naveen-demotest.myshopify.com/cdn/shop/files/2014_08_10_Lana_Look35_19.jpg?v=1751027297&width=823">
+                                    </div>
+                                    <div class="ws_added_product_con">
+                                        <div class="added-badge">
+                                            <span class="Polaris-Badge Polaris-Badge--toneSuccess">
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm">Added</span>
+                                            </span>
+                                        </div>
+                                        <div class="ws-added_text_btn">
+                                            <span class="Polaris-Text--root Polaris-Text--bodyLg ws_added_product_ttl">Young stylish girl model in casual summer clothes</span>
+                                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button">
+                                                <span class="Polaris-Button__Icon">
+                                                    <span class="Polaris-Icon">
+                                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <path d="M11.5 8.25a.75.75 0 0 1 .75.75v4.25a.75.75 0 0 1-1.5 0v-4.25a.75.75 0 0 1 .75-.75Z"/>
+                                                    <path d="M9.25 9a.75.75 0 0 0-1.5 0v4.25a.75.75 0 0 0 1.5 0v-4.25Z"/>
+                                                    <path fill-rule="evenodd" d="M7.25 5.25a2.75 2.75 0 0 1 5.5 0h3a.75.75 0 0 1 0 1.5h-.75v5.45c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311c-.642.327-1.482.327-3.162.327h-.4c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311c-.327-.642-.327-1.482-.327-3.162v-5.45h-.75a.75.75 0 0 1 0-1.5h3Zm1.5 0a1.25 1.25 0 1 1 2.5 0h-2.5Zm-2.25 1.5h7v5.45c0 .865-.001 1.423-.036 1.848-.033.408-.09.559-.128.633a1.5 1.5 0 0 1-.655.655c-.074.038-.225.095-.633.128-.425.035-.983.036-1.848.036h-.4c-.865 0-1.423-.001-1.848-.036-.408-.033-.559-.09-.633-.128a1.5 1.5 0 0 1-.656-.655c-.037-.074-.094-.225-.127-.633-.035-.425-.036-.983-.036-1.848v-5.45Z"/>
+                                                </svg>
+                                                    </span>
+                                                </span>
+                                                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="Polaris-Layout__Section">
+        <div class="Polaris-LegacyCard">
+            <div class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding ws_bundle_badge" onclick="ws_bundle_toggleSection()">
+                <div class="ws_bundle_header_left">
+                    <h2 class="Polaris-Text--root Polaris-Text--headingMd">Bundle Discount</h2>
+                    <span class="ws-pro-badge">
+                    <span class="ws-pro-badge-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="14" height="14" fill="#000">
+                            <path fill-rule="evenodd" d="M10 16.5a.75.75 0 0 1-.75-.75v-9.69l-2.72 2.72a.75.75 0 1 1-1.06-1.06l4-4a.75.75 0 0 1 1.06 0l4 4a.75.75 0 1 1-1.06 1.06l-2.72-2.72v9.69a.75.75 0 0 1-.75.75Z"/>
+                        </svg>
+                    </span>
+                    <span class="ws-pro-badge-text">Pro Feature</span>
+                    </span>
+                </div>
+                <span class="ws_bundle_arrow_Icon" id="ws_bundle_arrow">
+                    <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path fill="#000" fill-rule="evenodd" d="M6.24 8.2a.75.75 0 0 1 1.06.04l2.7 2.908 2.7-2.908a.75.75 0 1 1 1.1 1.02l-3.25 3.5a.75.75 0 0 1-1.1 0l-3.25-3.5a.75.75 0 0 1 .04-1.06Z"></path>
+                    </svg>
+                </span>
+            </div>
+            <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
+                <p>Replace the global discount with an individual discount for this bundle.</p>
+            </div>
+            <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding ws_bundle_content">
+                <div class="ws_bundle_partial_section">
+                    <div class="ws_bundle_partial_left">
+                    <div class="Polaris-TextContainer Polaris-TextContainer--spacingTight">
+                        <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Discount for partial bundles</p>
+                        <div class="Polaris-Box" style="--pc-box-color:var(--p-color-text-secondary)">
+                            <p class="Polaris-Text--root Polaris-Text--bodySm">Apply the discount even if the full bundle is not selected</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="ws_bundle_partial_right">
+                    <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Minimum number of recommendations 
+                                to apply the discount
+                            </p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                <div class="Polaris-Connected">
+                                <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                    <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                        <input id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
+                                        <div class="Polaris-TextField__Spinner" aria-hidden="true">
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M14.53 12.28a.75.75 0 0 1-1.06 0l-3.47-3.47-3.47 3.47a.75.75 0 0 1-1.06-1.06l4-4a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-TextField__Backdrop">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm">The discount will be applied if the current product and no fewer than this number of recommendations are selected.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
 
         </div>   <!--  polarise layout -->
       </div>
@@ -311,17 +501,17 @@ ul.Polaris-ResourceList__List {
 </body>
   </html>
   <script>
-  document.querySelectorAll('.recom_pro_search_tabs').forEach(tab => {
+  document.querySelectorAll('.add_recom_pro_search_tabs').forEach(tab => {
     tab.addEventListener('click', () => {
       // Deactivate all tabs
-      document.querySelectorAll('.recom_pro_search_tabs').forEach(t => {
+      document.querySelectorAll('.add_recom_pro_search_tabs').forEach(t => {
         t.classList.remove('Polaris-Tabs__Tab--active');
         t.setAttribute('aria-selected', 'false');
         t.setAttribute('tabindex', '-1');
       });
 
       // Hide all tab panels
-      document.querySelectorAll('.recom_tab_serch-panel').forEach(panel => {
+      document.querySelectorAll('.add_recom_tab_serch-panel').forEach(panel => {
         panel.classList.add('Polaris-Tabs__Panel--hidden');
       });
 
@@ -341,7 +531,7 @@ ul.Polaris-ResourceList__List {
 
 
 const input = document.getElementById('productSearchInput');
-const resultContainer = document.querySelector('#search-by-title-panel .ws_product_list');
+const resultContainer = document.querySelector('#add_search-by-title-panel .ws_product_list');
 
 input.addEventListener('input', function () {
   const query = input.value.trim().toLowerCase();
@@ -364,14 +554,15 @@ input.addEventListener('input', function () {
               </div>
 
               <!-- Edit button -->
-              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+             <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText Polaris-Button--disabled" type="button">
                 <span class="Polaris-Button__Icon">
                   <span class="Polaris-Icon">
                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z"/></svg>
+                     <path d="M10.75 5.75c0-.414-.336-.75-.75-.75s-.75.336-.75.75v3.5h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5Z"/>
+                    </svg>
                   </span>
                 </span>
-                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Edit</span>
+                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Added</span>
               </button>
             </div>
             </div>
@@ -389,11 +580,12 @@ input.addEventListener('input', function () {
               <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button">
                 <span class="Polaris-Button__Icon">
                   <span class="Polaris-Icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z"/></svg>
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                     <path d="M10.75 5.75c0-.414-.336-.75-.75-.75s-.75.336-.75.75v3.5h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5Z"/>
+                    </svg>
                   </span>
                 </span>
-                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Edit</span>
+                <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Add</span>
               </button>
             </div>
             </div>
@@ -433,11 +625,28 @@ input.addEventListener('input', function () {
         </nav>
       `;
     } else {
-      resultContainer.innerHTML = document.querySelector('.recom_tab_serch-panel .Polaris-EmptyState__ImageContainer').parentElement.outerHTML;
+      resultContainer.innerHTML = document.querySelector('.add_recom_tab_serch-panel .Polaris-EmptyState__ImageContainer').parentElement.outerHTML;
     }
   } else {
     resultContainer.innerHTML = ''; // Clear if input too short
   }
 });
+
+
+// bundle js toggle
+
+ function ws_bundle_toggleSection() {
+    const content = document.querySelector('.ws_bundle_content');
+    const arrow = document.getElementById('ws_bundle_arrow');
+    const isVisible = content.style.display !== 'none';
+
+    content.style.display = isVisible ? 'none' : 'block';
+    arrow.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+
+  // Optional: expand on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('.ws_bundle_content').style.display = 'block';
+  });
 
 </script>
