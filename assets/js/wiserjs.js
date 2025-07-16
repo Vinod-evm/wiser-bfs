@@ -39,7 +39,71 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// chart js
+
+// toggle js start
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.ws-switch-input').forEach(input => {
+    input.addEventListener('change', function () {
+      const settingKey = this.dataset.setting;
+      console.log(`Toggle "${settingKey}" is now`, this.checked);
+      // You can save to server/localStorage/etc. here
+    });
+  });
+});
+
+
+// hide show content on toggle
+function setupToggleSwitch(inputEl) {
+  const targetSelector = inputEl.getAttribute('data-target');
+  const targetEl = document.querySelector(targetSelector);
+  if (!targetEl) return;
+
+  function updateVisibility() {
+    targetEl.classList.toggle('show', inputEl.checked);
+  }
+
+  inputEl.addEventListener('change', updateVisibility);
+  updateVisibility(); // Initial state
+}
+document.addEventListener('DOMContentLoaded', function () {
+  const toggles = document.querySelectorAll('.ws-switch-input[data-target]');
+  toggles.forEach(setupToggleSwitch);
+});
+
+// radio button checked to show hide fieled
+document.addEventListener('DOMContentLoaded', function () {
+  const radios = document.querySelectorAll('input[name="discountType"]');
+  const percentageBlocks = document.querySelectorAll('.ws_percent_discount');
+  const fixedBlocks = document.querySelectorAll('.ws_fixed_discount');
+
+  function toggleDiscountBlock(value) {
+    if (value === 'percentage') {
+      percentageBlocks.forEach(el => el.classList.add('show'));
+      fixedBlocks.forEach(el => el.classList.remove('show'));
+    } else {
+      fixedBlocks.forEach(el => el.classList.add('show'));
+      percentageBlocks.forEach(el => el.classList.remove('show'));
+    }
+  }
+
+  // Initial toggle based on default selected radio
+  const checkedRadio = document.querySelector('input[name="discountType"]:checked');
+  if (checkedRadio) {
+    toggleDiscountBlock(checkedRadio.value);
+  }
+
+  // Toggle on change
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      toggleDiscountBlock(radio.value);
+    });
+  });
+});
+
+
+
+
+
 
 
 

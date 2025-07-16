@@ -10,6 +10,113 @@
     padding-top: 0;
 }
 
+/* toggle css  start*/
+
+.ws-switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+}
+
+.ws-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ws-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #999999;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.ws-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.ws-switch-input:checked+.ws-slider {
+    background-color: #333;
+    /* Polaris green */
+}
+
+.ws-switch-input:checked+.ws-slider:before {
+    transform: translateX(18px);
+}
+
+/* toggle css end */
+
+/* radio button css start */
+.ws-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.ws-radio-group-label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #202223;
+    margin-bottom: 0.25em;
+}
+
+.ws-radio-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    /* This can be anything, won't affect radio size */
+    color: #202223;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.ws-radio-option input[type="radio"] {
+    display: none;
+}
+
+.ws-custom-radio {
+    width: 21px;
+    height: 21px;
+    border: 2px solid #6d7175;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ws-radio-option input[type="radio"]:checked+.ws-custom-radio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.ws-radio-option input[type="radio"]:checked+.ws-custom-radio {
+    background-color: #202223;
+}
+
+
+/* radio button css end */
+
 .ws_progresstext {
     display: flex;
     align-items: center;
@@ -482,6 +589,7 @@ img.ws_banner_img {
     gap: 10px;
 }
 
+
 /* added product start */
 .ws_added_product_list {
     padding: 0;
@@ -593,6 +701,147 @@ img.ws_banner_img {
 .ws_bundle_partial_left {
     flex: 1 1 100%;
 }
+
+.ws_discount_type_right {
+    display: flex;
+    gap: 15px;
+}
+
+.ws_prefix {
+    background: #F2F2F2;
+    padding: 2px 4px;
+    border-radius: 6px;
+    margin-left: 0;
+}
+
+#ws_min_num_reco {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+#ws_min_num_reco.show {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.ws_percent_discount,
+.ws_fixed_discount {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.ws_percent_discount.show,
+.ws_fixed_discount.show {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.ws_fixed_ttl {
+    min-height: 40px;
+}
+
+/* imprt page css */
+
+.ws_uplaod-box {
+    border: 1px dashed #616161;
+    background: #F1F1F1;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.ws_uplaod-box svg {
+    background: #fff;
+    box-shadow: 0px 1px 0px 0px #E3E3E3 inset;
+    box-shadow: 1px 0px 0px 0px #E3E3E3 inset;
+    box-shadow: -1px 0px 0px 0px #E3E3E3 inset;
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+}
+
+.ws_csv_progress_box {
+    width: 40%;
+}
+
+.ws_csv_inlinestack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.ws_csv_fileicon {
+    width: 40px;
+    height: 40px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 #e3e3e3, inset 1px 0 0 #e3e3e3, inset -1px 0 0 #e3e3e3, inset 0 -1px 0 #b5b5b5;
+}
+
+.ws_csv_blockstack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.ws_csv_close {
+    cursor: pointer;
+    color: #6b6b6b;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.ws_csv_progress_box .Polaris-ProgressBar--toneHighlight {
+    --pc-progress-bar-background: #91D0FF6B;
+}
+
+.ws_import_instrution {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px;
+}
+
+.ws_import_ins_left {
+    flex: 1;
+}
+
+.ws_import_ins_right {
+    max-width: 60%;
+    flex-shrink: 0;
+}
+
+.ws_import_highlight {
+    background-color: #FFEF9D;
+}
+
+.ws_required_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ws_required_list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 
 @media (max-width: 768px) {
     .ws_analitic_cards {

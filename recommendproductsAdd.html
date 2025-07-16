@@ -432,10 +432,10 @@
                 </span>
             </div>
             <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
-                <p>Replace the global discount with an individual discount for this bundle.</p>
+                <p class="Polaris-Text--root Polaris-Text--bodyLg">Replace the global discount with an individual discount for this bundle.</p>
             </div>
             <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding ws_bundle_content">
-                <div class="ws_bundle_partial_section">
+                <div class="ws_bundle_partial_section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
                     <div class="ws_bundle_partial_left">
                     <div class="Polaris-TextContainer Polaris-TextContainer--spacingTight">
                         <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Discount for partial bundles</p>
@@ -443,10 +443,16 @@
                             <p class="Polaris-Text--root Polaris-Text--bodySm">Apply the discount even if the full bundle is not selected</p>
                         </div>
                     </div>
-                    </div>
+                    <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                        <label class="ws-switch">
+                           <input type="checkbox" class="ws-switch-input" data-setting="partial-bundle"  data-target="#ws_min_num_reco">
+                           <span class="ws-slider"></span>
+                        </label>
+                        </div> 
+                     </div>
                     <div class="ws_bundle_partial_right">
                     <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
-                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped" id="ws_min_num_reco">
                             <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Minimum number of recommendations 
                                 to apply the discount
                             </p>
@@ -490,6 +496,240 @@
                     </div>
                     </div>
                 </div>
+                <hr class="Polaris-Divider Polaris-LegacyCard__LastSectionPadding" style="border-block-start:var(--p-border-width-025) solid var(--p-color-border-secondary)">
+
+                <div class="ws_bundle_partial_section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                    <div class="ws_bundle_partial_left">
+                    <div class="Polaris-LegacyCard__LastSectionPadding">
+                        <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Discount type</p>
+                    </div>
+                    <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                        <div class="ws-radio-group">
+                              <label class="ws-radio-option">
+                                 <input type="radio" name="discountType" value="percentage" checked>
+                                 <span class="ws-custom-radio"></span>
+                                 <span>Percentage</span>
+                              </label>
+
+                              <label class="ws-radio-option">
+                                 <input type="radio" name="discountType" value="fixed">
+                                 <span class="ws-custom-radio"></span>
+                                 <span>Fixed Amount</span>
+                              </label>
+                           </div>
+                        </div> 
+                     </div>
+                    <div class="ws_bundle_partial_right">
+                     <div class="ws_discount_type_right">
+                        <div class="ws_minimum_bundle">
+                    <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Minimum bundle price to offer a discount
+                            </p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                <div class="Polaris-Connected">
+                                <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                    <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                        <input id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
+                                        <div class="Polaris-TextField__Spinner" aria-hidden="true">
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M14.53 12.28a.75.75 0 0 1-1.06 0l-3.47-3.47-3.47 3.47a.75.75 0 0 1-1.06-1.06l4-4a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-TextField__Prefix ws_prefix">
+                                          <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">USD</span>
+                                       </div>
+                                        <div class="Polaris-TextField__Backdrop">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm">Bundle price need to reach this amount in order to qualify for a discount.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  <div class="ws_dicount_percentage ">
+                    <div class="Polaris-BlockStack ws_percent_discount" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg">Discount percentage of the bundle total</p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                <div class="Polaris-Connected">
+                                <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                    <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                        <input id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
+                                        <div class="Polaris-TextField__Spinner" aria-hidden="true">
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M14.53 12.28a.75.75 0 0 1-1.06 0l-3.47-3.47-3.47 3.47a.75.75 0 0 1-1.06-1.06l4-4a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-TextField__Prefix ws_prefix">
+                                          <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">%</span>
+                                       </div>
+                                        <div class="Polaris-TextField__Backdrop">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm">Bundle price need to reach this amount in order to qualify for a discount.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="Polaris-BlockStack ws_fixed_discount" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400);">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ws_fixed_ttl">Fixed Discount amount</p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                <div class="Polaris-Connected">
+                                <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                    <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                        <input id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
+                                        <div class="Polaris-TextField__Spinner" aria-hidden="true">
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M14.53 12.28a.75.75 0 0 1-1.06 0l-3.47-3.47-3.47 3.47a.75.75 0 0 1-1.06-1.06l4-4a.75.75 0 0 1 1.06 0l4 4a.75.75 0 0 1 0 1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                            <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
+                                            <div class="Polaris-TextField__SpinnerIcon">
+                                                <span class="Polaris-Icon">
+                                                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                        <path fill-rule="evenodd" d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="Polaris-TextField__Prefix ws_prefix">
+                                          <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">USD</span>
+                                       </div>
+                                        <div class="Polaris-TextField__Backdrop">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm">The discount amount to be applied to full bundles whose total is no less than the minimum price configured above. The amount is taken from the bundle total.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    </div>
+                    </div>
+                </div>
+ <hr class="Polaris-Divider Polaris-LegacyCard__LastSectionPadding" style="border-block-start:var(--p-border-width-025) solid var(--p-color-border-secondary)">
+
+                <div class="ws_bundle_partial_section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                    <div class="ws_bundle_partial_left">
+                    <div class="Polaris-LegacyCard__LastSectionPadding">
+                        <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Discount message</p>
+                    </div>
+ 
+                     </div>
+                    <div class="ws_bundle_partial_right">
+                     <div class="ws_discount_type_right">
+                        <div class="ws_minimum_bundle">
+                    <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Message
+                            </p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                  <div class="Polaris-Connected">
+                                    <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                       <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                       <input autocomplete="off" class="Polaris-TextField__Input" type="text" value="Get a discount by purchasing all these...">
+                                       <div class="Polaris-TextField__Backdrop">
+                                       </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm ws_fixed_discount">Optional message displayed in the widget.We recommend you to showcase the discount by properly configuring a discount message as, for example, 'Save $20 on this bundle!'.You can configure its styling in the Visual preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="ws_dicount_percentage">
+                    <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400)">
+                        <div class="Polaris-FormLayout__Item Polaris-FormLayout--grouped">
+                            <p class="Polaris-Text--root Polaris-Text--medium Polaris-Text--bodyLg ">Applied message
+                            </p>
+                            <div class="Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
+                                  <div class="Polaris-Connected">
+                                    <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                       <div class="Polaris-TextField Polaris-TextField--hasValue Polaris-TextField--multiline">
+                                       <textarea id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="text" rows="3" aria-multiline="true" >Bundle discount will be applied at checkout</textarea>
+                                       <div class="Polaris-TextField__Backdrop">
+                                       </div>
+                                       
+                                             </div>
+                                          </div>
+                                       </div>
+                                <div class="Polaris-LegacyCard__FirstSectionPadding">
+                                <p class="Polaris-Text--root Polaris-Text--bodySm">Optionally, a message can be displayed in the shopping cart when the discount is applied.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                 <hr class="Polaris-Divider Polaris-LegacyCard__LastSectionPadding" style="border-block-start:var(--p-border-width-025) solid var(--p-color-border-secondary)">
+
+                  <div class="Polaris-LegacyStack Polaris-LegacyStack--spacingTight Polaris-LegacyStack--distributionTrailing">
+                     <div class="Polaris-LegacyStack__Item">
+                        <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                           <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+                        </button>
+                  </div>
+
+
             </div>
         </div>
         </div>
@@ -648,5 +888,7 @@ input.addEventListener('input', function () {
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.ws_bundle_content').style.display = 'block';
   });
+
+  
 
 </script>
