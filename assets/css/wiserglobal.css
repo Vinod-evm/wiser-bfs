@@ -90,9 +90,9 @@
 }
 
 .ws-custom-radio {
-    width: 21px;
-    height: 21px;
-    border: 2px solid #6d7175;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #161616;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
@@ -103,12 +103,13 @@
 
 .ws-radio-option input[type="radio"]:checked+.ws-custom-radio::after {
     content: '';
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: #fff;
     border-radius: 50%;
     display: block;
 }
+
 
 .ws-radio-option input[type="radio"]:checked+.ws-custom-radio {
     background-color: #202223;
