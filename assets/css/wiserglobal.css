@@ -32,7 +32,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #999999;
+    background-color: #B5B5B5;
     border-radius: 34px;
     transition: 0.4s;
 }
@@ -719,7 +719,7 @@ img.ws_banner_img {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 #ws_min_num_reco.show {
@@ -842,6 +842,236 @@ img.ws_banner_img {
     font-size: 14px;
     line-height: 1.5;
 }
+
+/* related product page css */
+li.ws_realted_list_grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    overflow: visible;
+}
+
+.ws_related_list ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+}
+
+span.ws_realaed_drag_icon {
+    line-height: 0;
+    cursor: all-scroll;
+    padding: 2px;
+}
+
+.ws_ralated_stack {
+    display: flex;
+    align-items: center;
+    background: #F3F3F3;
+    border-radius: 6px;
+}
+
+.ws_related_pro_ttl {
+    display: flex;
+    gap: 8px;
+    padding: 15px;
+    background: #fff;
+    line-height: 0;
+}
+
+.ws_tooltip_box {
+    position: relative;
+    display: inline-block;
+}
+
+.ws_tooltip_content {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    transform: translateY(-100%);
+    background-color: #fff;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 35%);
+    width: 200px;
+    white-space: normal;
+    line-height: 22px;
+}
+
+/* Triangle (left side) */
+.ws_tooltip_content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #fff;
+    /* matches tooltip bg */
+    z-index: 1000;
+}
+
+.ws_tooltip_box:hover .ws_tooltip_content {
+    display: block;
+}
+
+/* recomend email css */
+.ws_compaign_type_icon {
+    border: 1px solid #ccc;
+    background: #F3F3F3;
+    padding: 8px;
+    border-radius: 8px;
+    width: 55px;
+    text-align: center;
+    height: 55px;
+    vertical-align: middle;
+    line-height: 55px;
+}
+
+.ws_dynamic_upgrade {
+    filter: blur(2px) brightness(0.8);
+    pointer-events: none;
+}
+
+.ws_dyamic_compaign_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 10;
+    gap: 15px;
+}
+
+.ws_yellow_btn {
+    background-color: #FFB800;
+    cursor: pointer;
+    box-shadow: 0 2px 0px rgba(255, 184, 0, 0.7);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+ul.ws_email_widget_tabs {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ws_email_widget_tabs button {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.ws_email_widget_tabs .Polaris-Tabs__TabContainer {
+    padding: 0 15px;
+    border-left: 3px solid transparent;
+    transition: border-color .25s;
+}
+
+.ws_email_widget_tabs .Polaris-Tabs__TabContainer:has(.Polaris-Tabs__Tab--active) {
+    border-left-color: #000;
+}
+
+ul.ws_email_widget_tabs {
+    padding: 0;
+    margin: 0;
+}
+
+.ws_email_widget_tpe {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ws_email_widget_tpe li {
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.ws_email_widget_tpe li.active-border {
+    border-color: #000;
+}
+
+.ws_email_widget_tpe li .Polaris-ResourceItem__ItemWrapper {
+    border-radius: 8px;
+}
+
+.ws_widget_select_btn {
+    line-height: 0;
+}
+
+/* Container */
+.ws_widget_radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hide native radio */
+.ws_widget_radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom radio outer circle */
+.ws_widget_radio .ws_widget_radio_checkmark {
+    position: absolute;
+    left: auto;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    right: 0;
+}
+
+/* Checked state */
+.ws_widget_radio input:checked~.ws_widget_radio_checkmark {
+    background-color: #212121;
+    border-color: #212121;
+}
+
+/* Inject checkmark SVG icon */
+.ws_widget_radio input:checked~.ws_widget_radio_checkmark::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 8px;
+    transform: translate(-50%, -50%);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.47825 0.91107C9.80369 1.23651 9.80369 1.76414 9.47825 2.08958L4.47825 7.08958C4.15282 7.41502 3.62518 7.41502 3.29974 7.08958L0.799742 4.58958C0.474305 4.26414 0.474305 3.73651 0.799742 3.41107C1.12518 3.08563 1.65282 3.08563 1.97825 3.41107L3.889 5.32181L8.29974 0.91107C8.62518 0.585633 9.15282 0.585633 9.47825 0.91107Z' fill='white'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 
 @media (max-width: 768px) {

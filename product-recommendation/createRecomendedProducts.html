@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="assets/css/esm/styles.css" />
-        <link rel="stylesheet" href="assets/css/wiserglobal.css" />
+        <link rel="stylesheet" href="../assets/css/esm/styles.css" />
+        <link rel="stylesheet" href="../assets/css/wiserglobal.css" />
         <!-- <link rel="stylesheet" href="https://unpkg.com/@shopify/polaris@13.9.5/build/esm/styles.css"/> -->
-        <script src="assets/js/wiserjs.js"></script>
+        <script src="../assets/js/wiserjs.js"></script>
     </head>
     <body>
 
@@ -32,7 +32,7 @@
                                     <div class="Polaris-ButtonGroup__Item">
                                         <button
                                             class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText"
-                                            type="button">
+                                            type="button" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
                                             <span class="Polaris-Button__Icon">
                                                 <span class="Polaris-Icon">
                                                     <svg
@@ -130,7 +130,7 @@
                                                     class="Polaris-DataTable__Cell Polaris-DataTable__Cell--firstColumn">
 
                                                     <img
-                                                        src="assets/images/Thumbnail.png"
+                                                        src="../assets/images/Thumbnail.png"
                                                         style="width:40px; height:40px; border-radius:4px;">
 
                                                 </td>
@@ -228,7 +228,7 @@
                                                     class="Polaris-DataTable__Cell Polaris-DataTable__Cell--firstColumn">
 
                                                     <img
-                                                        src="assets/images/Thumbnail.png"
+                                                        src="../assets/images/Thumbnail.png"
                                                         style="width:40px; height:40px; border-radius:4px;">
 
                                                 </td>
@@ -330,5 +330,54 @@
                         </div>
                     </div>
                 </div>
+                 <!-- Polaris Modal -->
+    <div id="videoModal" data-portal-id="modal-:customModal:"
+      class="p-theme-light Polaris-ThemeProvider--themeContainer"
+      style="display: none;">
+      <div class="Polaris-Modal-Dialog__Container"
+        style="display: flex; justify-content: center; align-items: center;">
+        <div role="dialog" class="Polaris-Modal-Dialog"
+          style="max-width: 800px; width: 100%;">
+          <div class="Polaris-Modal-Dialog__Modal">
+            <div class="Polaris-Box"
+              style="padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+              <h2 class="Polaris-Text--headingMd">Watch Video</h2>
+              <button
+                class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly"
+                aria-label="Close" type="button" aria-pressed="false"
+                onclick="closeVideoModal()">
+                <span class="Polaris-Button__Icon"><span class="Polaris-Icon">
+                    <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                      focusable="false" aria-hidden="true">
+                      <path
+                        d="M13.97 15.03a.75.75 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.75.75 0 0 0-1.06-1.06l-3.97 3.97-3.97-3.97a.75.75 0 0 0-1.06 1.06l3.97 3.97-3.97 3.97a.75.75 0 1 0 1.06 1.06l3.97-3.97 3.97 3.97Z"></path>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+
+            <div class="Polaris-Modal__Body" style="padding: 0 1rem 1rem;">
+              <div style="position: relative; padding-top: 56.25%; height: 0;">
+                <iframe id="videoFrame" src frameborder="0" allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Polaris-Backdrop" onclick="closeVideoModal()"></div>
+    </div>
             </body>
         </html>
+<script>
+function openVideoModal(videoUrl) {
+  document.getElementById('videoModal').style.display = 'block';
+  document.getElementById('videoFrame').src = videoUrl + '?autoplay=1';
+}
+
+function closeVideoModal() {
+  document.getElementById('videoModal').style.display = 'none';
+  document.getElementById('videoFrame').src = ''; // Stop video
+}
+</script>
