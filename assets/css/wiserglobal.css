@@ -1073,11 +1073,26 @@ ul.ws_email_widget_tabs {
 
 .ws-email_service_list li {
     list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 ul.ws-email_service_list {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.ws-email_service_list img {
+    max-width: 120px;
+}
+
+.ws-email_service_list .Polaris-ResourceItem__ItemWrapper {
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
 
