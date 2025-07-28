@@ -1022,6 +1022,7 @@ ul.ws_email_widget_tabs {
     line-height: 0;
 }
 
+/* radio btn stling */
 /* Container */
 .ws_widget_radio {
     display: inline-block;
@@ -1031,14 +1032,12 @@ ul.ws_email_widget_tabs {
     user-select: none;
 }
 
-/* Hide native radio */
 .ws_widget_radio input[type="radio"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Custom radio outer circle */
 .ws_widget_radio .ws_widget_radio_checkmark {
     position: absolute;
     left: auto;
@@ -1052,13 +1051,11 @@ ul.ws_email_widget_tabs {
     right: 0;
 }
 
-/* Checked state */
 .ws_widget_radio input:checked~.ws_widget_radio_checkmark {
     background-color: #212121;
     border-color: #212121;
 }
 
-/* Inject checkmark SVG icon */
 .ws_widget_radio input:checked~.ws_widget_radio_checkmark::after {
     content: "";
     position: absolute;
@@ -1072,6 +1069,16 @@ ul.ws_email_widget_tabs {
     background-repeat: no-repeat;
 }
 
+/* readio button styleend */
+
+.ws-email_service_list li {
+    list-style: none;
+}
+
+ul.ws-email_service_list {
+    margin: 0;
+    padding: 0;
+}
 
 
 @media (max-width: 768px) {
