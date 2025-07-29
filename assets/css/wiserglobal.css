@@ -1,3 +1,7 @@
+img {
+    width: 100%;
+}
+
 .pad-bot-0 {
     padding-bottom: 0;
 }
@@ -1095,6 +1099,85 @@ ul.ws-email_service_list {
     border-radius: 8px;
 }
 
+.ws_email_preview {
+    display: flex;
+    gap: 15px;
+    padding: 0px 15px 15px;
+}
+
+.ws_onethird_prevsetting {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.ws_preview_right {
+    flex: 1;
+    border-radius: 8px;
+}
+
+ul.ws_preview_setting_collapsible {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ws_preview_setting_collapsible li {
+    list-style: none;
+}
+
+.ws_pre_dropdown {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 2px 10px 15px;
+    align-items: center;
+}
+
+.ws_desktop_email_preview_playout,
+.ws_mobile_email_preview_playout {
+    display: none;
+}
+
+.Polaris-Layout__Section.ws_oneThird {
+    flex: 1 1 10rem;
+    min-width: 0;
+}
+
+.ws_desktop_email_preview_playout .Polaris-Page-Header__Row:first-child {
+    min-height: 0 !important;
+}
+
+.ws-email_pre_footer li {
+    list-style: none;
+    background: #000;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.ws_email_footer_cont {
+    padding-top: 8px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ws_email_preview_ttl_box {
+    text-align: center;
+}
+
+.ws_email_preview_ttl {
+    min-height: 50px;
+}
+
+.ws_grid_item {
+    box-shadow: 0 1px 4px 0 #0000002b;
+    padding-bottom: 8px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
 
 @media (max-width: 768px) {
     .ws_analitic_cards {
