@@ -1179,6 +1179,49 @@ ul.ws_preview_setting_collapsible {
     border-bottom-right-radius: 6px;
 }
 
+/* ws emaol accordian */
+.ws_email_card {
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.ws_email_dropdown_header {
+    cursor: pointer;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f6f7;
+}
+
+.ws_email_heading {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.ws_email_dropdown_content {
+    display: none;
+    padding: 16px;
+    transition: all 0.3s ease;
+}
+
+.ws_email_card.active .ws_email_dropdown_content {
+    display: block;
+}
+
+.ws_email_icon_rotate {
+    transition: transform 0.3s ease;
+}
+
+.ws_email_card.active .ws_email_icon_rotate {
+    transform: rotate(180deg);
+}
+
+
 @media (max-width: 768px) {
     .ws_analitic_cards {
         grid-template-columns: 1fr;
