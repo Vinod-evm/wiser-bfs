@@ -743,10 +743,21 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
   document.querySelectorAll('.ws_email_dropdown_header').forEach(header => {
     header.addEventListener('click', () => {
-      const card = header.closest('.ws_email_card');
-      card.classList.toggle('active');
+      const allCards = document.querySelectorAll('.ws_email_card');
+      const currentCard = header.closest('.ws_email_card');
+
+      // Close all cards except the one clicked
+      allCards.forEach(card => {
+        if (card !== currentCard) {
+          card.classList.remove('active');
+        }
+      });
+
+      // Toggle current card
+      currentCard.classList.toggle('active');
     });
   });
+
 </script>
 
 
