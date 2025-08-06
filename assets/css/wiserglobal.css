@@ -1,7 +1,3 @@
-img {
-    width: 100%;
-}
-
 .pad-bot-0 {
     padding-bottom: 0;
 }
@@ -1106,13 +1102,14 @@ ul.ws-email_service_list {
 }
 
 .ws_onethird_prevsetting {
-    width: 160px;
+    width: 190px;
     flex-shrink: 0;
 }
 
 .ws_preview_right {
     flex: 1;
     border-radius: 8px;
+    width: 68%;
 }
 
 ul.ws_preview_setting_collapsible {
@@ -1120,7 +1117,7 @@ ul.ws_preview_setting_collapsible {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .ws_preview_setting_collapsible li {
@@ -1179,18 +1176,21 @@ ul.ws_preview_setting_collapsible {
     border-bottom-right-radius: 6px;
 }
 
+.ws_grid_item img {
+    width: 100%;
+}
+
+
 /* ws emaail accordian */
 .ws_email_card {
-    border: 1px solid #dfe3e8;
     border-radius: 8px;
-    margin-bottom: 10px;
     overflow: hidden;
     background: #fff;
 }
 
 .ws_email_dropdown_header {
     cursor: pointer;
-    padding: 12px 16px;
+    padding: 12px 6px 12px 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1205,7 +1205,6 @@ ul.ws_preview_setting_collapsible {
 
 .ws_email_dropdown_content {
     display: none;
-    padding: 16px;
     transition: all 0.3s ease;
 }
 
@@ -1219,6 +1218,107 @@ ul.ws_preview_setting_collapsible {
 
 .ws_email_card.active .ws_email_icon_rotate {
     transform: rotate(180deg);
+}
+
+/* font style css start  */
+.ws_email_format_options {
+    display: flex;
+    gap: 10px;
+}
+
+.ws_email_format_options input[type="checkbox"] {
+    display: none;
+}
+
+.ws_email_format_options label {
+    display: inline-block;
+    padding: 4px 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #fff;
+    color: #555555b0;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    line-height: 0;
+}
+
+.ws_email_format_options input[type="checkbox"]:checked+label {
+    border-color: #000;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* text align stting start */
+.ws_email_text_align_group {
+    display: flex;
+    gap: 10px;
+}
+
+.ws_email_text_align_group input[type="radio"] {
+    display: none;
+}
+
+.ws_email_text_align_group label {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #fff;
+    color: #555555b0;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ws_email_text_align_group input[type="radio"]:checked+label {
+    border-color: #000;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.ws_email_text_align_group label .ws_email_icon {
+    font-size: 20px;
+    display: block;
+    line-height: 18px;
+}
+
+.ws_email_text_align_label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* color setting */
+.ws_email_color_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ws_email_color_label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.ws_email_color_preview {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #000000;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.ws_email_color_picker {
+    position: absolute;
+    opacity: 0;
+
 }
 
 
