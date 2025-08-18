@@ -512,25 +512,21 @@
                                                                      </label>
                                                                   </div>
                                                                </div>
-                                                               <div class="ws_email_color_wrapper">
-                                                                  <label for="ws_email_color_picker">
-                                                                     <div class="ws_email_color_preview" id="ws_email_color_display"></div>
-                                                                  </label>                                                      
-                                                                  <div class="Polaris-Connected">
-                                                                     <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                              <div class="ws_email_template_color">
+                                                                  <div class="ws_email_color_wrapper">
+                                                                     <label>
+                                                                        <div class="ws_email_color_preview"></div>
+                                                                     </label>                                                      
+                                                                     <div class="Polaris-Connected">
+                                                                        <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
                                                                         <div class="Polaris-TextField Polaris-TextField--hasValue">
-                                                                        <input class="Polaris-TextField__Input ws_email_color_input" type="text" id="ws_email_color_hex" value="#000000">
-                                                                        <div class="Polaris-TextField__Backdrop">
+                                                                           <input class="Polaris-TextField__Input ws_email_color_input" type="text" name="color_field_2" value="#ff0000">
+                                                                           <div class="Polaris-TextField__Backdrop"></div>
                                                                         </div>
                                                                         </div>
                                                                      </div>
+                                                                     <input type="color" class="ws_email_color_picker" value="#ff0000">
                                                                   </div>
-                                                                  <input
-                                                                     type="color"
-                                                                     id="ws_email_color_picker"
-                                                                     class="ws_email_color_picker"
-                                                                     value="#000000"
-                                                                  >
                                                                </div>
                                                                
                                                             </div>
@@ -623,10 +619,10 @@
                                                          </div>
                                                       </div>
                                                       </div>
-                                                      <div class="ws_email_template_truncate_title">
+                                                <div class="ws_email_template_truncate_title">
                                                    <div class="Polaris-Labelled__LabelWrapper">
                                                       <div class="Polaris-Label">
-                                                         <label id=":Rq6:Label" for=":Rq6:" class="Polaris-Label__Text">
+                                                         <label for="truncate_ttl" class="Polaris-Label__Text">
                                                          <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Truncate Title</span>
                                                          </label>
                                                       </div>
@@ -634,7 +630,7 @@
                                                    <div class="Polaris-Connected">
                                                       <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
                                                          <div class="Polaris-TextField Polaris-TextField--hasValue">
-                                                            <input id=":Rq6:" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
+                                                            <input id="truncate_ttl" autocomplete="off" class="Polaris-TextField__Input" type="number" aria-labelledby=":Rq6:Label" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="1">
                                                             <div class="Polaris-TextField__Spinner" aria-hidden="true">
                                                                <div role="button" class="Polaris-TextField__Segment" tabindex="-1">
                                                                   <div class="Polaris-TextField__SpinnerIcon">
@@ -693,22 +689,22 @@
                                                          </div>
                                                          </div>
                                                         <div class="ws_email_format_options">
-                                                           <input type="checkbox" name="ws_email_format" id="ws_email_bold" />
-                                                            <label for="ws_email_bold"> 
+                                                           <input type="checkbox" name="ws_email_format_P" id="ws_email_bold_p" />
+                                                            <label for="ws_email_bold_p"> 
                                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M6.3002 2.7002C5.5532 2.7002 4.9502 3.3032 4.9502 4.0502V13.4642C4.9502 14.2292 5.5712 14.8502 6.3362 14.8502H10.3502C11.1138 14.8506 11.8577 14.6082 12.4744 14.1581C13.0912 13.7079 13.5489 13.0734 13.7813 12.346C14.0137 11.6187 14.0089 10.8363 13.7674 10.1119C13.526 9.38752 13.0605 8.75866 12.4382 8.3162C12.8044 7.77436 13.0162 7.14298 13.0506 6.48988C13.0851 5.83678 12.941 5.18663 12.6338 4.60925C12.3266 4.03188 11.8679 3.54909 11.307 3.21275C10.7461 2.87641 10.1042 2.69921 9.4502 2.7002H6.3002ZM9.4502 7.6502C9.80824 7.6502 10.1516 7.50797 10.4048 7.25479C10.658 7.00162 10.8002 6.65824 10.8002 6.3002C10.8002 5.94216 10.658 5.59878 10.4048 5.34561C10.1516 5.09243 9.80824 4.9502 9.4502 4.9502H7.2002V7.6502H9.4502ZM7.2002 9.9002V12.6002H10.3502C10.7082 12.6002 11.0516 12.458 11.3048 12.2048C11.558 11.9516 11.7002 11.6082 11.7002 11.2502C11.7002 10.8922 11.558 10.5488 11.3048 10.2956C11.0516 10.0424 10.7082 9.9002 10.3502 9.9002H7.2002Z" fill="#8A8A8A"/>
                                                                </svg>
                                                             </label>
 
-                                                            <input type="checkbox" name="ws_email_format" id="ws_email_italic" />
-                                                            <label for="ws_email_italic"> 
+                                                            <input type="checkbox" name="ws_email_format_p" id="ws_email_italic_p" />
+                                                            <label for="ws_email_italic_p"> 
                                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                   <path d="M12.8252 2.65039C13.1368 2.65044 13.4359 2.77383 13.6562 2.99414C13.8766 3.21445 13.9999 3.51364 14 3.8252C14 4.13673 13.8765 4.43591 13.6562 4.65625C13.4359 4.87656 13.1368 4.99995 12.8252 5H11.1172L9.29395 13H10.5752C10.8868 13.0001 11.1859 13.1244 11.4062 13.3447C11.6264 13.5651 11.75 13.8643 11.75 14.1758C11.7499 14.4871 11.6263 14.7856 11.4062 15.0059C11.1859 15.2262 10.8868 15.3505 10.5752 15.3506H5.1748C4.86325 15.3505 4.56406 15.2262 4.34375 15.0059C4.12373 14.7856 4.0001 14.4871 4 14.1758C4 13.8643 4.12358 13.5651 4.34375 13.3447C4.56406 13.1244 4.86324 13.0001 5.1748 13H6.88281L8.70703 5H7.4248C7.11325 4.99995 6.81406 4.87656 6.59375 4.65625C6.37352 4.43591 6.25 4.13673 6.25 3.8252C6.25011 3.18021 6.77982 2.6505 7.4248 2.65039H12.8252ZM4.82422 14.75C4.84722 14.764 4.87107 14.776 4.89551 14.7871C4.87108 14.7759 4.84721 14.764 4.82422 14.75ZM4.61914 14.5566C4.64238 14.5905 4.66789 14.6229 4.69727 14.6523C4.72516 14.6802 4.75615 14.7042 4.78809 14.7266C4.75636 14.7043 4.72505 14.6801 4.69727 14.6523C4.66788 14.6229 4.64234 14.5905 4.61914 14.5566ZM11.0527 14.6523C11.082 14.6231 11.1067 14.5903 11.1299 14.5566C11.1068 14.5903 11.082 14.623 11.0527 14.6523ZM4.55762 14.4453C4.57127 14.4764 4.58722 14.5063 4.60547 14.5352C4.58726 14.5063 4.57123 14.4765 4.55762 14.4453ZM11.1436 14.5352C11.1618 14.5063 11.1777 14.4765 11.1914 14.4453C11.1778 14.4765 11.1618 14.5063 11.1436 14.5352ZM4.5127 14.3076C4.52074 14.3479 4.53365 14.3868 4.54883 14.4248C4.5337 14.3868 4.52074 14.3479 4.5127 14.3076ZM11.25 14.1758C11.25 14.1375 11.2446 14.0998 11.2383 14.0625C11.2446 14.0997 11.25 14.1376 11.25 14.1758ZM4.5459 13.9346C4.53604 13.9604 4.52813 13.9868 4.52148 14.0137C4.52814 13.9868 4.53601 13.9604 4.5459 13.9346ZM11.2275 14.0137C11.2209 13.9867 11.213 13.9604 11.2031 13.9346C11.213 13.9604 11.2209 13.9867 11.2275 14.0137ZM4.61328 13.8008C4.59065 13.8347 4.57174 13.8708 4.55566 13.9082C4.57176 13.8709 4.59064 13.8347 4.61328 13.8008ZM5.04297 13.5137C4.95641 13.531 4.87425 13.5653 4.80078 13.6143C4.87424 13.5653 4.95638 13.5309 5.04297 13.5137ZM11.0527 13.6982C11.0231 13.6687 10.9901 13.6434 10.9561 13.6201C10.99 13.6434 11.0232 13.6687 11.0527 13.6982ZM10.9336 13.6055C10.9072 13.5889 10.8799 13.5743 10.8516 13.5615C10.8799 13.5743 10.9072 13.5889 10.9336 13.6055ZM6.80176 4.08398H6.80078H6.80176ZM13.5 3.8252C13.5 3.78653 13.4948 3.74853 13.4883 3.71094C13.4948 3.74854 13.5 3.78653 13.5 3.8252ZM13.4785 3.66699C13.4715 3.638 13.4629 3.60976 13.4521 3.58203C13.4629 3.60977 13.4715 3.638 13.4785 3.66699ZM13.3027 3.34766C13.2731 3.31807 13.2401 3.29285 13.2061 3.26953C13.2401 3.29285 13.2732 3.31808 13.3027 3.34766ZM13.1846 3.25586C13.1548 3.23713 13.124 3.22088 13.0918 3.20703C13.1239 3.2209 13.1549 3.2371 13.1846 3.25586ZM13.0762 3.2002C13.0375 3.1847 12.998 3.17126 12.957 3.16309C12.998 3.17126 13.0376 3.18468 13.0762 3.2002Z" fill="#8A8A8A"/>
                                                                </svg>
                                                             </label>
 
-                                                            <input type="checkbox" name="ws_email_format" id="ws_email_underline" />
-                                                            <label for="ws_email_underline"> 
+                                                            <input type="checkbox" name="ws_email_format_p" id="ws_email_underline_p" />
+                                                            <label for="ws_email_underline_p"> 
                                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                   <path d="M13.7256 13.4502C14.037 13.4503 14.3364 13.5738 14.5566 13.7939C14.7768 14.0142 14.9003 14.3136 14.9004 14.625C14.9004 14.9365 14.7768 15.2357 14.5566 15.4561C14.3364 15.6763 14.037 15.7997 13.7256 15.7998H4.27539C3.96395 15.7998 3.66462 15.6762 3.44434 15.4561C3.2241 15.2357 3.09961 14.9365 3.09961 14.625C3.09966 14.3134 3.22403 14.0143 3.44434 13.7939C3.66462 13.5738 3.96395 13.4502 4.27539 13.4502H13.7256ZM13.7256 15.2998L13.8242 15.292C13.8286 15.2913 13.8326 15.2888 13.8369 15.2881C13.8002 15.2943 13.7633 15.2998 13.7256 15.2998ZM13.8857 15.2773C13.912 15.2709 13.9377 15.2635 13.9629 15.2539C13.9377 15.2634 13.912 15.2709 13.8857 15.2773ZM14.2031 15.1025H14.2021C14.1417 15.163 14.0701 15.2088 13.9932 15.2422C14.0298 15.2263 14.0662 15.2088 14.0996 15.1865C14.1362 15.1621 14.1716 15.1341 14.2031 15.1025ZM3.61328 14.7568C3.63049 14.8436 3.66394 14.9264 3.71289 15C3.66415 14.9267 3.6305 14.8442 3.61328 14.7578V14.7568ZM14.4004 14.625C14.4004 14.584 14.395 14.5436 14.3877 14.5039C14.395 14.5437 14.4004 14.584 14.4004 14.625ZM14.3809 14.4756C14.3741 14.446 14.3661 14.417 14.3555 14.3887C14.3661 14.417 14.3741 14.446 14.3809 14.4756ZM3.71289 14.25H3.71387H3.71289ZM13.9834 14.002C14.0644 14.0355 14.139 14.0844 14.2021 14.1475C14.261 14.2064 14.3064 14.2759 14.3398 14.3506C14.3245 14.3163 14.308 14.2824 14.2871 14.251L14.2031 14.1475C14.1399 14.0842 14.0646 14.0355 13.9834 14.002ZM4.14258 13.9629H4.14355H4.14258ZM12.1504 2.2002C12.4618 2.20032 12.7612 2.32383 12.9814 2.54395C13.2016 2.76423 13.3251 3.06356 13.3252 3.375V8.77539C13.3251 9.92222 12.8694 11.022 12.0586 11.833C11.2477 12.6439 10.1477 13.1004 9.00098 13.1006C7.85403 13.1006 6.75345 12.644 5.94238 11.833C5.13146 11.022 4.67583 9.92229 4.67578 8.77539V3.375C4.67583 3.06344 4.79922 2.76425 5.01953 2.54395C5.23985 2.3238 5.53912 2.2002 5.85059 2.2002C6.16199 2.20032 6.46141 2.32377 6.68164 2.54395C6.9018 2.76423 7.02534 3.06356 7.02539 3.375V8.77539C7.02544 9.29912 7.23415 9.80154 7.60449 10.1719C7.97482 10.5419 8.47743 10.75 9.00098 10.75C9.52446 10.7498 10.0273 10.5421 10.3975 10.1719C10.7676 9.80157 10.9755 9.29896 10.9756 8.77539V3.375C10.9756 3.06344 11.099 2.76425 11.3193 2.54395C11.5396 2.32379 11.8389 2.20025 12.1504 2.2002ZM9.56445 12.5586C9.50289 12.5678 9.44105 12.5758 9.37891 12.582C9.50381 12.5696 9.62765 12.5509 9.75 12.5264L9.56445 12.5586ZM8.63086 12.582C8.69039 12.5878 8.75059 12.5927 8.81055 12.5957C8.75042 12.5927 8.69055 12.5878 8.63086 12.582ZM8.45508 12.5605C8.46643 12.5622 8.47789 12.5629 8.48926 12.5645C8.47789 12.5629 8.46643 12.5622 8.45508 12.5605ZM8.2627 12.5283C8.29733 12.5351 8.33232 12.54 8.36719 12.5459C8.33232 12.54 8.29733 12.5351 8.2627 12.5283ZM8.10156 12.4932C8.12451 12.4987 8.14783 12.5027 8.1709 12.5078C8.14783 12.5027 8.12451 12.4987 8.10156 12.4932ZM7.91113 12.4404C7.93741 12.4482 7.96378 12.4556 7.99023 12.4629C7.96378 12.4556 7.93741 12.4483 7.91113 12.4404ZM7.7207 12.3789C7.76591 12.395 7.81162 12.4095 7.85742 12.4238C7.81162 12.4095 7.76591 12.395 7.7207 12.3789ZM7.54883 12.3135C7.59755 12.3335 7.64677 12.3521 7.69629 12.3701C7.64678 12.3521 7.59754 12.3335 7.54883 12.3135ZM7.3916 12.2441C7.43431 12.264 7.4771 12.2835 7.52051 12.3018C7.47711 12.2835 7.43431 12.264 7.3916 12.2441ZM7.23828 12.1689C7.27034 12.1856 7.30246 12.202 7.33496 12.2178C7.30247 12.202 7.27033 12.1856 7.23828 12.1689ZM7.07812 12.0811C7.11015 12.0997 7.14228 12.1181 7.1748 12.1357C7.14228 12.1181 7.11015 12.0997 7.07812 12.0811ZM6.91602 11.9805C6.94882 12.0018 6.98125 12.0236 7.01465 12.0439C6.98125 12.0236 6.94881 12.0018 6.91602 11.9805ZM6.78418 11.8916C6.80937 11.9095 6.83477 11.9271 6.86035 11.9443C6.83477 11.9271 6.80936 11.9095 6.78418 11.8916ZM6.57227 11.7295C6.47666 11.6509 6.38418 11.5678 6.2959 11.4795C6.25151 11.4351 6.20798 11.39 6.16602 11.3438C6.2079 11.39 6.25159 11.4352 6.2959 11.4795C6.38419 11.5678 6.47663 11.6509 6.57227 11.7295ZM5.93457 11.0615C5.95052 11.0829 5.96698 11.1039 5.9834 11.125C5.96698 11.1039 5.95053 11.0829 5.93457 11.0615ZM12.0322 11.1055C12.0435 11.0908 12.0553 11.0764 12.0664 11.0615C12.0553 11.0764 12.0435 11.0907 12.0322 11.1055ZM5.8252 10.9072C5.84512 10.9369 5.86594 10.966 5.88672 10.9951C5.86593 10.966 5.84513 10.9369 5.8252 10.9072ZM5.73047 10.7598C5.75271 10.7964 5.77631 10.8322 5.7998 10.8682C5.7763 10.8322 5.75272 10.7964 5.73047 10.7598ZM12.2334 10.8174C12.2448 10.7993 12.2555 10.7809 12.2666 10.7627C12.2555 10.7809 12.2448 10.7993 12.2334 10.8174ZM5.63965 10.5996C5.65598 10.6297 5.6723 10.6598 5.68945 10.6895C5.67229 10.6598 5.656 10.6297 5.63965 10.5996ZM12.3145 10.6816C12.3302 10.6543 12.3463 10.6273 12.3613 10.5996C12.3463 10.6273 12.3302 10.6543 12.3145 10.6816ZM7.25 10.5254H7.25098H7.25ZM5.55273 10.4297C5.56691 10.4592 5.58175 10.4884 5.59668 10.5176C5.58173 10.4884 5.56692 10.4592 5.55273 10.4297ZM12.4043 10.5176C12.4178 10.4911 12.4304 10.4642 12.4434 10.4375C12.4304 10.4642 12.4178 10.4911 12.4043 10.5176ZM12.4766 10.3672C12.4881 10.342 12.4988 10.3164 12.5098 10.291C12.4988 10.3165 12.4881 10.342 12.4766 10.3672ZM5.48242 10.2754C5.4922 10.2983 5.50247 10.321 5.5127 10.3438C5.50246 10.321 5.49221 10.2983 5.48242 10.2754ZM5.41602 10.1074C5.42402 10.129 5.43204 10.1505 5.44043 10.1719C5.43203 10.1505 5.42403 10.129 5.41602 10.1074ZM12.5605 10.1719C12.567 10.1554 12.5729 10.1387 12.5791 10.1221C12.5729 10.1387 12.567 10.1554 12.5605 10.1719ZM5.35254 9.92383C5.36346 9.9585 5.37482 9.99301 5.38672 10.0273C5.3748 9.99301 5.36348 9.9585 5.35254 9.92383ZM12.6162 10.0195C12.6253 9.99325 12.6341 9.96691 12.6426 9.94043C12.6341 9.96691 12.6253 9.99325 12.6162 10.0195ZM12.668 9.85645C12.6767 9.82698 12.6844 9.79727 12.6924 9.76758C12.6844 9.79727 12.6767 9.82698 12.668 9.85645ZM5.31445 9.79492C5.31797 9.80764 5.32155 9.82033 5.3252 9.83301C5.32154 9.82033 5.31798 9.80764 5.31445 9.79492ZM12.7158 9.67871C12.7221 9.65308 12.7277 9.62733 12.7334 9.60156C12.7277 9.62733 12.7221 9.65308 12.7158 9.67871ZM12.8066 9.14355C12.8124 9.08417 12.8183 9.02466 12.8213 8.96484H12.8203C12.8173 9.02464 12.8124 9.08419 12.8066 9.14355ZM6.53711 9.01953H6.53809H6.53711ZM6.52539 3.375L6.51758 3.27539C6.51649 3.26813 6.51402 3.26112 6.5127 3.25391C6.52002 3.2937 6.52538 3.33402 6.52539 3.375ZM12.8252 3.375L12.8174 3.27539C12.8163 3.26813 12.8138 3.26112 12.8125 3.25391C12.8198 3.2937 12.8252 3.33402 12.8252 3.375ZM6.50586 3.22559C6.49911 3.196 6.4911 3.16699 6.48047 3.13867C6.49112 3.16701 6.49908 3.196 6.50586 3.22559ZM12.8057 3.22559C12.7989 3.196 12.7909 3.16699 12.7803 3.13867C12.7909 3.16701 12.7989 3.196 12.8057 3.22559ZM6.1084 2.75195C6.18936 2.78547 6.26395 2.83436 6.32715 2.89746C6.38605 2.95636 6.43141 3.02586 6.46484 3.10059C6.44952 3.06628 6.43303 3.0324 6.41211 3.00098L6.32812 2.89746C6.26486 2.83422 6.18955 2.78545 6.1084 2.75195ZM12.4082 2.75195C12.4892 2.78548 12.5637 2.83437 12.627 2.89746C12.6859 2.95636 12.7312 3.02586 12.7646 3.10059C12.7493 3.06629 12.7328 3.0324 12.7119 3.00098L12.6279 2.89746C12.5647 2.83426 12.4894 2.78546 12.4082 2.75195ZM5.71777 2.71289H5.71875H5.71777ZM12.0176 2.71289H12.0186H12.0176ZM6.04492 11.2021C6.07784 11.2422 6.11184 11.2815 6.14648 11.3203C6.11184 11.2815 6.07785 11.2422 6.04492 11.2021ZM6.5791 11.7354C6.6199 11.7687 6.66111 11.8014 6.70312 11.833C6.66112 11.8014 6.61989 11.7687 6.5791 11.7354ZM12.7539 9.50684C12.7643 9.45341 12.7731 9.39966 12.7812 9.3457C12.7731 9.39965 12.7643 9.45341 12.7539 9.50684ZM12.7842 9.3291C12.7909 9.28304 12.7967 9.23682 12.8018 9.19043C12.7967 9.23682 12.7909 9.28304 12.7842 9.3291Z" fill="#8A8A8A"/>
                                                                </svg>
@@ -725,8 +721,8 @@
                                                          </div>
                                                          </div>
                                                         <div class="ws_email_text_align_group">
-                                                         <input type="radio" name="ws_email_text_align" id="ws_email_align_left" />
-                                                         <label for="ws_email_align_left">
+                                                         <input type="radio" name="ws_email_text_align_p" id="ws_email_align_left_p" />
+                                                         <label for="ws_email_align_left_p">
                                                             <span class="ws_email_icon">
                                                                <svg width="20" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                <path d="M3.75 4C3.55109 4 3.36032 4.07902 3.21967 4.21967C3.07902 4.36032 3 4.55109 3 4.75C3 4.94891 3.07902 5.13968 3.21967 5.28033C3.36032 5.42098 3.55109 5.5 3.75 5.5H16.25C16.4489 5.5 16.6397 5.42098 16.7803 5.28033C16.921 5.13968 17 4.94891 17 4.75C17 4.55109 16.921 4.36032 16.7803 4.21967C16.6397 4.07902 16.4489 4 16.25 4H3.75Z" fill="#8A8A8A"/>
@@ -737,8 +733,8 @@
                                                             </span> 
                                                          </label>
 
-                                                         <input type="radio" name="ws_email_text_align" id="ws_email_align_center" />
-                                                         <label for="ws_email_align_center">
+                                                         <input type="radio" name="ws_email_text_align_p" id="ws_email_align_center_p" />
+                                                         <label for="ws_email_align_center_p">
                                                             <span class="ws_email_icon">
                                                                <svg width="20" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4.75C3 4.55109 3.07902 4.36032 3.21967 4.21967C3.36032 4.07902 3.55109 4 3.75 4H16.25C16.4489 4 16.6397 4.07902 16.7803 4.21967C16.921 4.36032 17 4.55109 17 4.75C17 4.94891 16.921 5.13968 16.7803 5.28033C16.6397 5.42098 16.4489 5.5 16.25 5.5H3.75C3.55109 5.5 3.36032 5.42098 3.21967 5.28033C3.07902 5.13968 3 4.94891 3 4.75Z" fill="#8A8A8A"/>
@@ -749,8 +745,8 @@
                                                             </span> <!-- Center Align Symbol -->
                                                          </label>
 
-                                                         <input type="radio" name="ws_email_text_align" id="ws_email_align_right" />
-                                                         <label for="ws_email_align_right">
+                                                         <input type="radio" name="ws_email_text_align_p" id="ws_email_align_right_p" />
+                                                         <label for="ws_email_align_right_p">
                                                             <span class="ws_email_icon">
                                                                <svg width="20" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                   <path d="M3.75 4C3.55109 4 3.36032 4.07902 3.21967 4.21967C3.07902 4.36032 3 4.55109 3 4.75C3 4.94891 3.07902 5.13968 3.21967 5.28033C3.36032 5.42098 3.55109 5.5 3.75 5.5H16.25C16.4489 5.5 16.6397 5.42098 16.7803 5.28033C16.921 5.13968 17 4.94891 17 4.75C17 4.55109 16.921 4.36032 16.7803 4.21967C16.6397 4.07902 16.4489 4 16.25 4H3.75Z" fill="#8A8A8A"/>
@@ -770,27 +766,22 @@
                                                                      </label>
                                                                   </div>
                                                                </div>
-                                                               <div class="ws_email_color_wrapper">
-                                                                  <label for="ws_email_color_picker">
-                                                                     <div class="ws_email_color_preview" id="ws_email_color_display"></div>
-                                                                  </label>                                                      
-                                                                  <div class="Polaris-Connected">
-                                                                     <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
-                                                                        <div class="Polaris-TextField Polaris-TextField--hasValue">
-                                                                        <input class="Polaris-TextField__Input ws_email_color_input" type="text" id="ws_email_color_hex" value="#000000">
-                                                                        <div class="Polaris-TextField__Backdrop">
-                                                                        </div>
-                                                                        </div>
-                                                                     </div>
+                                                            <div class="ws_email_template_color">
+                                                            <div class="ws_email_color_wrapper">
+                                                               <label>
+                                                                  <div class="ws_email_color_preview"></div>
+                                                               </label>                                                      
+                                                               <div class="Polaris-Connected">
+                                                                  <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                                  <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                                                     <input class="Polaris-TextField__Input ws_email_color_input" type="text" name="color_field_1" value="#000000">
+                                                                     <div class="Polaris-TextField__Backdrop"></div>
                                                                   </div>
-                                                                  <input
-                                                                     type="color"
-                                                                     id="ws_email_color_picker"
-                                                                     class="ws_email_color_picker"
-                                                                     value="#000000"
-                                                                  >
+                                                                  </div>
                                                                </div>
-                                                               
+                                                               <input type="color" class="ws_email_color_picker" value="#000000">
+                                                            </div>
+                                                            </div>
                                                             </div>
                                                         
                                              </div>
@@ -852,12 +843,12 @@
                                              <div class="Polaris-LegacyCard__LastSectionPadding">
                                                 <hr class="Polaris-Divider" style="border-block-start:var(--p-border-width-025) solid var(--p-color-border-secondary)">
                                              </div>
-                                             <img src="../assets/images/email-preview-skelton.png">
+                                             <img src="../assets/images/email-preview-skelton.png" style="width:100%">
                                              <div class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding">
                                                 <h2 class="Polaris-Text--root Polaris-Text--headingMd Polaris-Text--center">New Arrivals</h2>
                                              </div>
                                              <div class="ws_email_product-grid Polaris-LegacyCard__Section Polaris-LegacyCard__FirstSectionPadding Polaris-LegacyCard__LastSectionPadding">
-                                                <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:repeat(4, minmax(0, 1fr));--pc-inline-grid-gap-xs:var(--p-space-400)">
+                                                <div class="Polaris-InlineGrid" style="--pc-inline-grid-grid-template-columns-xs:repeat(3, minmax(0, 1fr));--pc-inline-grid-gap-xs:var(--p-space-400)">
                                                    <div class="ws_grid_item">
                                                       <img src="../assets/images/Rectangle1.png">
                                                       <div class="ws_email_preview_ttl_box">
@@ -877,13 +868,6 @@
                                                       <div class="ws_email_preview_ttl_box">
                                                          <p class="Polaris-Text--root Polaris-Text--bodyXs ws_email_preview_ttl">Contemplative Oversized Coat</p>
                                                          <p class="Polaris-Text--root Polaris-Text--bodyXs Polaris-Text--semibold">$20.00</p>
-                                                      </div>
-                                                   </div>
-                                                   <div class="ws_grid_item">
-                                                      <img src="../assets/images/Rectangle4.png">
-                                                      <div class="ws_email_preview_ttl_box">
-                                                         <p class="Polaris-Text--root Polaris-Text--bodyXs ws_email_preview_ttl">Round Neck Pullover Sweatshirt</p>
-                                                         <p class="Polaris-Text--root Polaris-Text--bodyXs Polaris-Text--semibold">$30.00</p>
                                                       </div>
                                                    </div>
                                                 </div>
@@ -962,7 +946,61 @@
                               <p class="Polaris-Text--root Polaris-Text--bodyLg">You are all set to launch your campaign, copy the generated HTML code and save this campaign and paste this 
                                  code in your email template.
                               </p>
-                           </div>
+                              <div class="">
+                                 <div class="Polaris-Labelled__LabelWrapper">
+                                    <div class="Polaris-Label">
+                                       <label id=":Rq6:Label" for=":Rq6:" class="Polaris-Label__Text">
+                                       <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Campaign Name</span>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="Polaris-Connected">
+                                    <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                       <div class="Polaris-TextField Polaris-TextField--hasValue">
+                                       <input  autocomplete="off" class="Polaris-TextField__Input" type="text" value="New Arrival">
+                                       <div class="Polaris-TextField__Backdrop">
+                                       </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 </div>
+                              </div>
+                              <div class="Polaris-Page">
+  <div class="Polaris-Box" style="--pc-box-padding-block-start-xs:var(--p-space-400);--pc-box-padding-block-start-md:var(--p-space-600);--pc-box-padding-block-end-xs:var(--p-space-400);--pc-box-padding-block-end-md:var(--p-space-600);--pc-box-padding-inline-start-xs:var(--p-space-400);--pc-box-padding-inline-start-sm:var(--p-space-0);--pc-box-padding-inline-end-xs:var(--p-space-400);--pc-box-padding-inline-end-sm:var(--p-space-0);position:relative">
+    <div role="status">
+      <p class="Polaris-Text--root Polaris-Text--visuallyHidden">Products. This page is ready</p>
+    </div>
+    <div class="Polaris-Page-Header--noBreadcrumbs Polaris-Page-Header--mediumTitle">
+      <div class="Polaris-Page-Header__Row">
+        <div class="Polaris-Page-Header__TitleWrapper">
+          <div class="Polaris-Header-Title__TitleWrapper">
+            <h1 class="Polaris-Header-Title">
+              <span class="Polaris-Text--root Polaris-Text--headingLg Polaris-Text--bold">Products</span>
+            </h1>
+          </div>
+        </div>
+        <div class="Polaris-Page-Header__RightAlign">
+        <div class="Polaris-ButtonGroup">
+            <div class="Polaris-ButtonGroup__Item">
+               <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                  <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+               </button>
+            </div>
+            <div class="Polaris-ButtonGroup__Item">
+               <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                  <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Save</span>
+               </button>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
                            <hr class="Polaris-Divider" style="border-block-start:var(--p-border-width-025) solid var(--p-color-border)">
                            <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding Polaris-LegacyCard__FirstSectionPadding">
                               <div class="Polaris-ButtonGroup" style="justify-content: flex-end;">
@@ -1146,18 +1184,17 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- color picker -->
  
 <script>
-  const colorPicker = document.getElementById('ws_email_color_picker');
-  const colorDisplay = document.getElementById('ws_email_color_display');
-  const colorHexInput = document.getElementById('ws_email_color_hex');
+ document.querySelectorAll('.ws_email_template_color').forEach(block => {
+  const colorPicker = block.querySelector('.ws_email_color_picker');
+  const colorDisplay = block.querySelector('.ws_email_color_preview');
+  const colorHexInput = block.querySelector('.ws_email_color_input');
 
-  // When color is picked
   colorPicker.addEventListener('input', function () {
     const color = this.value;
     colorDisplay.style.backgroundColor = color;
     colorHexInput.value = color;
   });
 
-  // When text hex is changed manually
   colorHexInput.addEventListener('input', function () {
     const val = this.value;
     if (/^#[0-9A-Fa-f]{6}$/.test(val)) {
@@ -1165,6 +1202,7 @@ document.addEventListener("DOMContentLoaded", function () {
       colorPicker.value = val;
     }
   });
+});
 </script>
 
 <!-- price range slider -->
