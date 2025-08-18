@@ -257,7 +257,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid #DECEBF; */
 }
 
 .ws_baner_left h5 {
@@ -1319,6 +1318,17 @@ ul.ws_preview_setting_collapsible {
     position: absolute;
     opacity: 0;
 
+}
+
+.ws_tableRow td {
+    padding: var(--p-space-400) var(--p-space-150);
+    font-size: 14px;
+}
+
+.ws_tableRow th {
+    color: #4a4949;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 
