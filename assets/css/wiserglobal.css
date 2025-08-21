@@ -1321,16 +1321,252 @@ ul.ws_preview_setting_collapsible {
 }
 
 .ws_tableRow td {
-    padding: var(--p-space-400) var(--p-space-150);
+    padding: var(--p-space-300) var(--p-space-150);
     font-size: 14px;
 }
 
 .ws_tableRow th {
-    color: #4a4949;
+    color: var(--p-color-text-secondary);
     font-weight: 500;
     font-size: 14px;
+    background: var(--p-color-bg-surface-secondary);
 }
 
+.ws_indexTableRow th {
+    padding: var(--p-space-300)
+}
+
+.ws_indexTableRow td {
+    padding: var(--p-space-300) !important;
+}
+
+.ws_selectScreen {
+    display: none;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.ws_selectScreen.ws_upsell_active {
+    display: block;
+    opacity: 1;
+}
+
+/* .ws_selectStep {
+    transition: border-color 300ms ease;
+    border-bottom: 3px solid transparent;
+} */
+.ws_selectStep {
+    position: relative;
+    padding: 0 30px 0 45px;
+    background: #fff;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* angled arrow shape for ALL steps */
+.ws_selectStep::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid #f9f9f9;
+    z-index: 2;
+}
+
+.ws_selectStep::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid #ddd;
+    z-index: 1;
+}
+
+/* active step */
+.ws_selectStep.ws_upsell_active {
+    background: #f9f9f9;
+    border-bottom: 3px solid #000;
+}
+
+.ws_selectStep.ws_upsell_active::after {
+    border-left-color: #fff;
+}
+
+/* .ws_selectStep.ws_upsell_active {
+    border-bottom: 3px solid #000;
+} */
+
+.ws_icon_circle_bg {
+    background: #000;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ws_upsell_stepper {
+    display: flex;
+    border-bottom: var(--p-border-width-025) solid var(--p-color-border);
+}
+
+.upsell_stepIcon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.ws_orDivider {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.ws_orDivider::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-bottom: var(--p-border-width-025) solid var(--p-color-border-secondary);
+    width: 100%;
+    top: 36px;
+    bottom: auto;
+    z-index: 0;
+}
+
+.ws_orDivider span {
+    z-index: 1;
+}
+
+.ws_choose_pro_collection {
+    background: #F1F2F4;
+    border-radius: 8px;
+}
+
+.ws_hiddenBtn {
+    display: none;
+}
+
+.upsell_row {
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.ws_upselldotted_box {
+    flex: 1;
+    min-height: 140px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.ws_flow_chart {
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+.upsell_1,
+.upsell_2,
+.upsell_3 {
+    padding: 30px;
+    background: #F1F1F1;
+    border: 1px dashed #616161;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.upsell_top {
+    width: 48.4%;
+}
+
+.upsell_tooltip_content {
+    display: none;
+}
+
+.upsell_tooltip_icon {
+    z-index: 99;
+}
+
+.upsell_tooltip_icon:hover+.upsell_tooltip_content {
+    display: block;
+}
+
+.upsell_desclined::before {
+    content: "";
+    position: absolute;
+    border: 2px solid #DEDEDE;
+    top: -12px;
+    left: -458px;
+    right: auto;
+    height: 64px;
+    width: 656px;
+    border-left: 0;
+    border-bottom: 0;
+    border-radius: 0 15px 0 0;
+}
+
+.upsell_row::before {
+    content: "";
+    position: absolute;
+    left: 75px;
+    top: 238px;
+    height: 215px;
+    border: 2px solid #DEDEDE;
+    border-radius: 15px 0 0px 15px;
+    width: 30px;
+    border-right: 0;
+}
+
+.upsell_1::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: -5px;
+    top: 64%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.upsell_2::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: -6px;
+    top: 65%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.upsell_3::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: 47.3%;
+    top: 33%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+}
 
 @media (max-width: 768px) {
     .ws_analitic_cards {
