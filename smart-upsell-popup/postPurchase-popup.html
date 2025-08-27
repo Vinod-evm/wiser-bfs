@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post Purchase Upsell</title>
+    <!-- <link rel="stylesheet"
+            href="https://unpkg.com/@shopify/polaris@11.0.1/build/esm/styles.css" /> -->
+    <link rel="stylesheet" href="../assets/css/esm/styles.css" />
+    <link rel="stylesheet" href="../assets/css/wiserglobal.css" />
+    <script src="../assets/js/wiserjs.js"></script>
+  </head>
+  <body>
+   <div class="Polaris-Page">
+      <div class="Polaris-Page__Content">
+         <div class="Polaris-Layout">
+            <!-- Welcome Section -->
+            <div class="Polaris-Layout__Section">
+               <div class="Polaris-Page-Header--isSingleRow Polaris-Page-Header--noBreadcrumbs Polaris-Page-Header--mediumTitle">
+                  <div class="Polaris-Page-Header__Row">
+                     <div class="Polaris-Page-Header__TitleWrapper Polaris-Page-Header__TitleWrapperExpand">
+                        <div class="Polaris-Header-Title__TitleWrapper">
+                           <h1 class="Polaris-Header-Title">
+                              <span class="Polaris-Text--root Polaris-Text--headingLg">Smart Upsell Popups</span>
+                           </h1>
+                        </div>
+                     </div>
+                     <div class="Polaris-Page-Header__RightAlign">
+                        <div class="Polaris-ButtonGroup">
+                           <div class="Polaris-ButtonGroup__Item">
+                              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                                 <span class="Polaris-Button__Icon">
+                                    <span class="Polaris-Icon">
+                                       <svg width="18" height="18" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8376 7.63595C14.8879 8.24255 14.8879 9.75815 13.8376 10.3639L7.0876 14.2609C6.0373 14.8675 4.7251 14.1097 4.7251 12.8974V5.10335C4.7251 3.89015 6.0373 3.13235 7.0876 3.73895L13.8376 7.63595ZM13.1626 9.19475C13.1968 9.175 13.2252 9.1466 13.2449 9.1124C13.2647 9.07819 13.2751 9.03939 13.2751 8.9999C13.2751 8.96041 13.2647 8.92161 13.2449 8.88741C13.2252 8.8532 13.1968 8.8248 13.1626 8.80505L6.4126 4.90805C6.37836 4.88828 6.33952 4.87789 6.29999 4.87791C6.26045 4.87793 6.22162 4.88836 6.1874 4.90816C6.15319 4.92796 6.12479 4.95643 6.10507 4.9907C6.08536 5.02496 6.07502 5.06382 6.0751 5.10335V12.8974C6.07518 12.9368 6.08563 12.9756 6.10541 13.0097C6.12519 13.0438 6.1536 13.0722 6.18779 13.0919C6.22199 13.1116 6.26075 13.1219 6.30021 13.1219C6.33967 13.1219 6.37843 13.1115 6.4126 13.0918L13.1626 9.19475Z" fill="#303030"/>
+                                       </svg>
+                                    </span>
+                                 </span>
+                                 <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">How to Setup</span>
+                              </button>
+                           </div>
+                           <div class="Polaris-ButtonGroup__Item">
+                              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconWithText" type="button" >
+                                 <span class="Polaris-Button__Icon">
+                                    <span class="Polaris-Icon">
+                                       <svg width="18" height="18" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M9.75 4.75C9.75 4.336 9.414 4 9 4C8.586 4 8.25 4.336 8.25 4.75V8.25H4.75C4.336 8.25 4 8.586 4 9C4 9.414 4.336 9.75 4.75 9.75H8.25V13.25C8.25 13.664 8.586 14 9 14C9.414 14 9.75 13.664 9.75 13.25V9.75H13.25C13.664 9.75 14 9.414 14 9C14 8.586 13.664 8.25 13.25 8.25H9.75V4.75Z" fill="white"></path>
+                                       </svg>
+                                    </span>
+                                 </span>
+                                 <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Create New Popup</span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Banner -->
+            <div class="Polaris-Layout__Section">
+               <div class="Polaris-Banner Polaris-Banner--withinPage" tabindex="0" role="alert" aria-live="polite" id="postPurchase_enbleSetting">
+                  <div class="Polaris-Box" style="--pc-box-width:100%; background: #fff1e3;">
+                     <div class="Polaris-BlockStack" style="--pc-block-stack-align:space-between;--pc-block-stack-order:column">
+                        <div class="Polaris-Box" style=" --pc-box-padding-block-start-xs: var(--p-space-300); --pc-box-padding-inline-start-xs: var(--p-space-300); --pc-box-padding-inline-end-xs: var(--p-space-300); --pc-box-border-start-start-radius: var(--p-border-radius-300); --pc-box-border-start-end-radius: var(--p-border-radius-300);">
+                           <div class="Polaris-InlineStack" style="--pc-inline-stack-align:space-between;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                              <div class="Polaris-InlineStack" style="--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-100);--pc-inline-stack-flex-direction-xs:row">
+                                 <span class="Polaris-Banner--textWarningOnBgFill">
+                                    <span class="Polaris-Icon">
+                                       <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                          <path d="M10 6.75a.75.75 0 0 1 .75.75v3.5a.75.75 0 1 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Z" fill="rgba(94, 66, 0, 1);">
+                                          </path>
+                                          <path d="M11 13.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" fill="rgba(94, 66, 0, 1);">
+                                          </path>
+                                          <path fill-rule="evenodd" d="M10 3.5c-1.045 0-1.784.702-2.152 1.447a449.26 449.26 0 0 1-2.005 3.847l-.028.052a403.426 403.426 0 0 0-2.008 3.856c-.372.752-.478 1.75.093 2.614.57.863 1.542 1.184 2.464 1.184h7.272c.922 0 1.895-.32 2.464-1.184.57-.864.465-1.862.093-2.614-.21-.424-1.113-2.147-2.004-3.847l-.032-.061a429.497 429.497 0 0 1-2.005-3.847c-.368-.745-1.107-1.447-2.152-1.447Zm-.808 2.112c.404-.816 1.212-.816 1.616 0 .202.409 1.112 2.145 2.022 3.88a418.904 418.904 0 0 1 2.018 3.875c.404.817 0 1.633-1.212 1.633h-7.272c-1.212 0-1.617-.816-1.212-1.633.202-.408 1.113-2.147 2.023-3.883a421.932 421.932 0 0 0 2.017-3.872Z" fill="rgba(94, 66, 0, 1);">
+                                          </path>
+                                       </svg>
+                                    </span>
+                                 </span>
+                                 <h2 class="Polaris-Text--root Polaris-Text--headingSm Polaris-Text--break" style="color: rgba(94, 66, 0, 1);font-size: 14px;">Action Required</h2>
+                              </div>
+                              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Dismiss notification" type="button" onclick="document.getElementById('postPurchase_enbleSetting').style.display='none'">
+                                 <span class="Polaris-Button__Icon">
+                                    <span class="Polaris-Banner--textWarningOnBgFill">
+                                       <span class="Polaris-Icon">
+                                          <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                             <path d="M13.97 15.03a.75.75 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.75.75 0 0 0-1.06-1.06l-3.97 3.97-3.97-3.97a.75.75 0 0 0-1.06 1.06l3.97 3.97-3.97 3.97a.75.75 0 1 0 1.06 1.06l3.97-3.97 3.97 3.97Z" fill="rgba(94, 66, 0, 1);">
+                                             </path>
+                                          </svg>
+                                       </span>
+                                    </span>
+                                 </span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="Polaris-Box" style="--pc-box-padding-block-start-xs:var(--p-space-100);--pc-box-padding-block-end-xs:var(--p-space-300);--pc-box-padding-block-end-md:var(--p-space-400);--pc-box-padding-inline-start-xs:var(--p-space-300);--pc-box-padding-inline-start-md:var(--p-space-400);--pc-box-padding-inline-end-xs:var(--p-space-300);--pc-box-padding-inline-end-md:var(--p-space-400)">
+                           <div class="Polaris-BlockStack" style="--pc-block-stack-order:column;--pc-block-stack-gap-xs:var(--p-space-400); padding-left: 20px;">
+                              <div>
+                                 <span class="Polaris-Text--root Polaris-Text--bodyMd">
+                                    <p style="color: rgba(94, 66, 0, 1);font-size: 14px;">Enable “Smart Upsell Popups” in theme editor to display pop up on your store.</p>
+                                 </span>
+                              </div>
+                              <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" style="max-width: fit-content;" type="button">
+                              <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium" >Enable Popup</span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="Polaris-Layout__Section">
+               <div class="Polaris-LegacyCard">
+                  <div class="Polaris-IndexFilters__IndexFiltersWrapper" style="height: 45px;">
+                     <div class="Polaris-IndexFilters">
+                        <div class="ws_table_tabs" style="transition:opacity 150ms var(--p-motion-ease);opacity:1">
+                           <div class="Polaris-IndexFilters-Container">
+                              <div class="Polaris-InlineStack" style="--pc-inline-stack-align:start;--pc-inline-stack-block-align:center;--pc-inline-stack-wrap:nowrap;--pc-inline-stack-gap-xs:var(--p-space-0);--pc-inline-stack-gap-md:var(--p-space-200);--pc-inline-stack-flex-direction-xs:row">
+                                 <div class="Polaris-IndexFilters__TabsWrapper" style="height: auto;">
+                                    <div style="transition:opacity 150ms var(--p-motion-ease);opacity:1">
+                                       <div class="Polaris-Tabs__Outer">
+                                          <div class="Polaris-Box" style="--pc-box-padding-block-start-md:var(--p-space-300);--pc-box-padding-block-end-md:var(--p-space-300);--pc-box-padding-inline-start-md:var(--p-space-200);--pc-box-padding-inline-end-md:var(--p-space-200)">
+                                             <div class="Polaris-Tabs__Wrapper Polaris-Tabs__WrapperWithNewButton">
+                                                <div class="Polaris-Tabs__ButtonWrapper">
+                                                   <ul class="Polaris-Tabs" data-tabs-focus-catchment="true" role="tablist">
+                                                      <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                                         <button id="" class="Polaris-Tabs__Tab Polaris-Tabs__Tab--active" role="tab" type="button" tabindex="0" aria-selected="true" style="gap: 5px;">
+                                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                               <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">All</span>
+                                                            </div>
+                                                            <div class="ws_toggleAll"><span class="Polaris-Icon"><svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" d="M5.72 8.47a.75.75 0 0 1 1.06 0l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06Z"></path></svg></span></div>
+                                                            <span class="Polaris-Badge">
+                                                              <span class="Polaris-Text--root Polaris-Text--bodySm">4</span>
+                                                            </span>
+                                                         </button>
+                                                         <div class="p-theme-light Polaris-ThemeProvider--themeContainer " >
+                                                          <div class="Polaris-PositionedOverlay Polaris-Popover__PopoverOverlay Polaris-Popover__PopoverOverlay--close ws_dropdownAll" style="top: 26px; left: 0; display: none;">
+                                                            <div class="Polaris-Popover" data-polaris-overlay="true">
+                                                              <div class="Polaris-Popover__FocusTracker" tabindex="0"></div>
+                                                              <div class="Polaris-Popover__ContentContainer">
+                                                                <div id=":rp:" tabindex="-1" class="Polaris-Popover__Content">
+                                                                 <div class="Polaris-Popover__Pane Polaris-Scrollable Polaris-Scrollable--vertical Polaris-Scrollable--horizontal Polaris-Scrollable--scrollbarWidthThin" data-polaris-scrollable="true">
+                                                                    <div class="Polaris-Tabs__ActionListWrap">
+                                                                        <div class="Polaris-Box">
+                                                                          <div class="Polaris-Box" tabindex="-1" style="--pc-box-padding-block-start-xs: var(--p-space-150); --pc-box-padding-block-end-xs: var(--p-space-150); --pc-box-padding-inline-start-xs: var(--p-space-150); --pc-box-padding-inline-end-xs: var(--p-space-150);">
+                                                                              <ul class="Polaris-BlockStack Polaris-BlockStack--listReset" role="menu" style="--pc-block-stack-order: column; --pc-block-stack-gap-xs: var(--p-space-050);">
+                                                                                <li class="Polaris-Box" role="presentation">
+                                                                                    <div class="Polaris-InlineStack" style="--pc-inline-stack-wrap: nowrap; --pc-inline-stack-flex-direction-xs: row;">
+                                                                                      <button type="button" class="Polaris-ActionList__Item Polaris-ActionList--default" role="menuitem">
+                                                                                          <div class="Polaris-Box" style="--pc-box-width: 100%;">
+                                                                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-150); --pc-inline-stack-flex-direction-xs: row;">
+                                                                                                <span class="Polaris-ActionList__Prefix">
+                                                                                                  <span class="Polaris-Icon">
+                                                                                                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                                                                        <path d="M10 14a.75.75 0 0 1-.75-.75v-3.5a.75.75 0 0 1 1.5 0v3.5a.75.75 0 0 1-.75.75Z"></path>
+                                                                                                        <path d="M9 7a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"></path>
+                                                                                                        <path fill-rule="evenodd" d="M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Zm-1.5 0a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0Z"></path>
+                                                                                                      </svg>
+                                                                                                  </span>
+                                                                                                </span>
+                                                                                                <span class="Polaris-ActionList__Text"><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--regular"><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--regular">Active</span></span></span>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                      </button>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="Polaris-Box" role="presentation">
+                                                                                    <div class="Polaris-InlineStack" style="--pc-inline-stack-wrap: nowrap; --pc-inline-stack-flex-direction-xs: row;">
+                                                                                      <button type="button" class="Polaris-ActionList__Item Polaris-ActionList--default" role="menuitem">
+                                                                                          <div class="Polaris-Box" style="--pc-box-width: 100%;">
+                                                                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-150); --pc-inline-stack-flex-direction-xs: row;">
+                                                                                                <span class="Polaris-ActionList__Prefix">
+                                                                                                  <span class="Polaris-Icon">
+                                                                                                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                                                                        <path d="M11.25 8.5c-.414 0-.75.336-.75.75v1.25h-1.25c-.414 0-.75.336-.75.75s.336.75.75.75h1.25v1.25c0 .414.336.75.75.75s.75-.336.75-.75v-1.25h1.25c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-1.25v-1.25c0-.414-.336-.75-.75-.75Z"></path>
+                                                                                                        <path fill-rule="evenodd" d="M8.75 16.5c-1.438 0-2.618-1.104-2.74-2.51-1.406-.122-2.51-1.302-2.51-2.74v-5c0-1.519 1.231-2.75 2.75-2.75h5c1.438 0 2.618 1.104 2.74 2.51 1.406.122 2.51 1.302 2.51 2.74v5c0 1.519-1.231 2.75-2.75 2.75h-5Zm0-10.5c-1.519 0-2.75 1.231-2.75 2.75v3.725c-.57-.116-1-.62-1-1.225v-5c0-.69.56-1.25 1.25-1.25h5c.605 0 1.11.43 1.225 1h-3.725Zm0 1.5c-.69 0-1.25.56-1.25 1.25v5c0 .69.56 1.25 1.25 1.25h5c.69 0 1.25-.56 1.25-1.25v-5c0-.69-.56-1.25-1.25-1.25h-5Z"></path>
+                                                                                                      </svg>
+                                                                                                  </span>
+                                                                                                </span>
+                                                                                                <span class="Polaris-ActionList__Text"><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--regular"><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--regular">Inactive</span></span></span>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                      </button>
+                                                                                    </div>
+                                                                                </li>         
+                                                                              </ul>
+                                                                          </div>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                                  </div></div>
+                                                                  <div class="Polaris-Popover__FocusTracker" tabindex="0"></div>
+                                                                  </div></div></div>
+                                                      </li>
+                                                      <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                                         <button id="" class="Polaris-Tabs__Tab" role="tab" type="button" tabindex="-1" aria-selected="false" style="gap: 5px;">
+                                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                               <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Active</span>
+                                                            </div>
+                                                            <span class="Polaris-Badge">
+                                                              <span class="Polaris-Text--root Polaris-Text--bodySm">3</span>
+                                                            </span>
+                                                         </button>
+                                                      </li>
+                                                      <li class="Polaris-Tabs__TabContainer" role="presentation">
+                                                         <button id="" class="Polaris-Tabs__Tab" role="tab" type="button" tabindex="-1" aria-selected="false" style="gap: 5px;">
+                                                            <div class="Polaris-InlineStack" style="--pc-inline-stack-align: center; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: nowrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                                               <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Inactive</span>
+                                                            </div>
+                                                            <span class="Polaris-Badge">
+                                                              <span class="Polaris-Text--root Polaris-Text--bodySm">1</span>
+                                                            </span>
+                                                         </button>
+                                                      </li>
+                                                   </ul>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="Polaris-IndexFilters__ActionWrap">
+                                    <span class="ws_table_searchBtn">
+                                       <div style="transition:opacity 150ms var(--p-motion-ease);opacity:1">
+                                          <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeSlim Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Search and filter results" type="button" tabindex="0" aria-describedby=":Rd6cq6:" data-polaris-tooltip-activator="true">
+                                             <span class="Polaris-Button__Icon">
+                                                <div class="Polaris-InlineStack" style="--pc-inline-stack-wrap:wrap;--pc-inline-stack-gap-xs:var(--p-space-0);--pc-inline-stack-flex-direction-xs:row">
+                                                   <span class="Polaris-Icon Polaris-Icon--toneBase">
+                                                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                         <path fill-rule="evenodd" d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z">
+                                                         </path>
+                                                      </svg>
+                                                   </span>
+                                                   <span class="Polaris-Icon Polaris-Icon--toneBase">
+                                                      <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                         <path d="M3 6a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 0 1.5h-12.5a.75.75 0 0 1-.75-.75Z">
+                                                         </path>
+                                                         <path d="M6.75 14a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75Z">
+                                                         </path>
+                                                         <path d="M5.5 9.25a.75.75 0 0 0 0 1.5h9a.75.75 0 0 0 0-1.5h-9Z">
+                                                         </path>
+                                                      </svg>
+                                                   </span>
+                                                </div>
+                                             </span>
+                                          </button>
+                                       </div>
+                                    </span>
+                                    <div>
+                                       <span class="">
+                                          <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeSlim Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Sort the results" type="button" tabindex="0" aria-describedby=":R3t6cq6:" data-polaris-tooltip-activator="true" aria-controls=":Rt6cq6:" aria-owns=":Rt6cq6:" aria-expanded="false" data-state="closed">
+                                             <span class="Polaris-Button__Icon">
+                                                <span class="Polaris-Icon">
+                                                   <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                      <path d="M7.75 6.06v7.69a.75.75 0 0 1-1.5 0v-7.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 1 1-1.06 1.06l-1.72-1.72Z">
+                                                      </path>
+                                                      <path d="M13.75 6.25a.75.75 0 0 0-1.5 0v7.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72v-7.69Z">
+                                                      </path>
+                                                   </svg>
+                                                </span>
+                                             </span>
+                                          </button>
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="ws_table_search" style="display:none;opacity:0;transition:opacity 150ms var(--p-motion-ease);">
+                           <div class="Polaris-Filters__Container">
+                              <div class="Polaris-Box" style="--pc-box-padding-block-start-xs: var(--p-space-300); --pc-box-padding-block-end-xs: var(--p-space-300); --pc-box-padding-inline-start-xs: var(--p-space-200); --pc-box-padding-inline-end-xs: var(--p-space-200);">
+                                 <div class="Polaris-InlineStack" style="--pc-inline-stack-align: start; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: wrap; --pc-inline-stack-gap-xs: var(--p-space-400); --pc-inline-stack-gap-md: var(--p-space-300); --pc-inline-stack-flex-direction-xs: row;">
+                                    <div class="Polaris-Filters__SearchField" style="transition: opacity var(--p-motion-duration-150) var(--p-motion-ease); opacity: 1;">
+                                       <div class="Polaris-Labelled--hidden">
+                                          <div class="Polaris-Labelled__LabelWrapper">
+                                             <div class="Polaris-Label">
+                                                <label id=":rf4:Label" for=":rf4:" class="Polaris-Label__Text">
+                                                <span class="Polaris-Text--root Polaris-Text--bodyMd">Searching in all</span>
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <div class="Polaris-Connected">
+                                             <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                                                <div class="Polaris-TextField Polaris-TextField--borderless Polaris-TextField--slim">
+                                                   <div class="Polaris-TextField__Prefix Polaris-TextField__PrefixIcon" id=":rf4:-Prefix">
+                                                      <span class="Polaris-Text--root Polaris-Text--bodyMd">
+                                                         <span class="Polaris-Icon">
+                                                            <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                               <path fill-rule="evenodd" d="M12.323 13.383a5.5 5.5 0 1 1 1.06-1.06l2.897 2.897a.75.75 0 1 1-1.06 1.06l-2.897-2.897Zm.677-4.383a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"></path>
+                                                            </svg>
+                                                         </span>
+                                                      </span>
+                                                   </div>
+                                                   <input id=":rf4:" placeholder="Searching in all" autocomplete="off" class="Polaris-TextField__Input Polaris-TextField__Input--hasClearButton" type="text" aria-labelledby=":rf4:Label :rf4:-Prefix" aria-invalid="false" data-1p-ignore="true" data-lpignore="true" data-form-type="other" value="">
+                                                   <div class="Polaris-TextField__Backdrop"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="Polaris-IndexFilters__ButtonWrap">
+                                       <div class="Polaris-InlineStack" style="--pc-inline-stack-align: start; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: wrap; --pc-inline-stack-gap-xs: var(--p-space-200); --pc-inline-stack-flex-direction-xs: row;">
+                                          <div class="ws_table-searchCancel">
+                                             <div style="transition: opacity 150ms var(--p-motion-ease); opacity: 1;">
+                                                <div class="Polaris-InlineStack" style="--pc-inline-stack-align: start; --pc-inline-stack-block-align: center; --pc-inline-stack-wrap: wrap; --pc-inline-stack-gap-xs: var(--p-space-100); --pc-inline-stack-flex-direction-xs: row;">
+                                                   <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMicro Polaris-Button--textAlignCenter" type="button">
+                                                   <span class="Polaris-Text--root Polaris-Text--bodySm Polaris-Text--medium">Cancel</span>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div>
+                                             <span class="">
+                                                <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeSlim Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Sort the results" type="button" tabindex="0" aria-describedby=":rf7:" data-polaris-tooltip-activator="true" aria-controls=":rf6:" aria-owns=":rf6:" aria-expanded="false" data-state="closed">
+                                                   <span class="Polaris-Button__Icon">
+                                                      <span class="Polaris-Icon">
+                                                         <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                            <path d="M7.75 6.06v7.69a.75.75 0 0 1-1.5 0v-7.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l3-3a.75.75 0 0 1 1.06 0l3 3a.75.75 0 1 1-1.06 1.06l-1.72-1.72Z"></path>
+                                                            <path d="M13.75 6.25a.75.75 0 0 0-1.5 0v7.69l-1.72-1.72a.75.75 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72v-7.69Z"></path>
+                                                         </svg>
+                                                      </span>
+                                                   </span>
+                                                </button>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     </div>
+                     <!-- empty state box -->
+                     <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding Polaris-LegacyCard__FirstSectionPadding">
+                        <div class="Polaris-LegacyCard__LastSectionPadding Polaris-LegacyCard__FirstSectionPadding">
+                           <div class="Polaris-BlockStack" style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column">
+                              <img src="../assets/images/post-purchase-popup-empty.png">
+                              <div class="Polaris-Box">
+                                 <div class="Polaris-BlockStack" style="--pc-block-stack-inline-align:center;--pc-block-stack-order:column">
+                                    <div class="Polaris-LegacyCard__Header Polaris-LegacyCard__FirstSectionPadding">
+                                       <h2 class="Polaris-Text--root Polaris-Text--headingLg Polaris-Text--center">Smart Upsell Popup</h2>
+                                    </div>
+                                    <div class="Polaris-LegacyCard__Section Polaris-LegacyCard__LastSectionPadding">
+                                       <span class="Polaris-Text--root Polaris-Text--bodyLg Polaris-Text--block Polaris-Text--center">
+                                          <p>No post-purchase upsell funnel found. Boost your AOV by creating one now!</p>
+                                       </span>
+                                    </div>
+                                    <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantPrimary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter" type="button">
+                                       <span class="Polaris-Button__Icon">
+                                          <span class="Polaris-Icon">
+                                             <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg" focusable="false" aria-hidden="true">
+                                                <path d="M10.75 5.75c0-.414-.336-.75-.75-.75s-.75.336-.75.75v3.5h-3.5c-.414 0-.75.336-.75.75s.336.75.75.75h3.5v3.5c0 .414.336.75.75.75s.75-.336.75-.75v-3.5h3.5c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-3.5v-3.5Z">
+                                                </path>
+                                             </svg>
+                                          </span>
+                                       </span>
+                                       <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Create New Popup</span>
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+
+  <!-- table start -->
+  <!-- <div class="Polaris-IndexTable">
+   <div class="Polaris-IndexTable__IndexTableWrapper" style="height:auto">
+      <div class="Polaris-IndexTable-ScrollContainer">
+         <table class="Polaris-IndexTable__Table Polaris-IndexTable__Table--sticky">
+            <thead>
+               <tr class="ws_indexTableRow">
+                  <th class="Polaris-IndexTable__TableHeading" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Campaign name</span></div>
+                  </th>
+                  <th class="Polaris-IndexTable__TableHeading" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Target Page</span></div>
+                  </th> 
+                  <th class="Polaris-IndexTable__TableHeading" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Recommendation Type</span></div>
+                  </th>                  
+                  <th class="Polaris-IndexTable__TableHeading" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Display Period</span></div>
+                  </th>
+                 
+                   <th class="Polaris-IndexTable__TableHeading" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Status</span></div>
+                  </th>
+                   <th class="Polaris-IndexTable__TableHeading Polaris-IndexTable__TableHeading--last" data-index-table-heading="true">
+                     <div style="--pc-index-table-heading-extra-padding-right:0" class=""><span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--medium">Action</span></div>
+                  </th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr id="1020" class="Polaris-IndexTable__TableRow ws_indexTableRow" >
+                  <td class="Polaris-IndexTable__TableCell">
+                    <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                      <span class="Polaris-Text--root Polaris-Text--bodyMd">Popup Title</span>
+                    </span>
+                  </td>
+                 <td class="Polaris-IndexTable__TableCell">
+                    <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                      <span class="Polaris-Text--root Polaris-Text--bodyMd">Home</span>
+                    </span>
+                  </td>
+                  <td class="Polaris-IndexTable__TableCell">
+                    <span class="Polaris-Text--root Polaris-Text--bodyMd Polaris-Text--bold">
+                      <span class="Polaris-Text--root Polaris-Text--bodyMd">New arrivals</span>
+                    </span>
+                  </td>                 
+                 
+                  <td class="Polaris-IndexTable__TableCell">22-Aug-2025 - 22-Aug-2025</td>
+                 
+                   <td class="Polaris-IndexTable__TableCell">
+                    <label class="ws-switch">
+                        <input type="checkbox" class="ws-switch-input" data-setting="post-upsell-popup-1" data-target="" checked="">
+                        <span class="ws-slider"></span>
+                    </label>
+                  </td>
+                  <td class="Polaris-IndexTable__TableCell">
+                    <div class="Polaris-ButtonGroup">
+                                <div class="Polaris-ButtonGroup__Item">
+                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Add theme" type="button">
+                                <span class="Polaris-Button__Icon">
+                                    <span class="Polaris-Icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M15.655 4.344a2.695 2.695 0 0 0-3.81 0l-.599.599-.009-.009-1.06 1.06.008.01-5.88 5.88a2.75 2.75 0 0 0-.805 1.944v1.922a.75.75 0 0 0 .75.75h1.922a2.75 2.75 0 0 0 1.944-.806l7.54-7.539a2.695 2.695 0 0 0 0-3.81Zm-4.409 2.72-5.88 5.88a1.25 1.25 0 0 0-.366.884v1.172h1.172c.331 0 .65-.132.883-.366l5.88-5.88-1.689-1.69Zm2.75.629.599-.599a1.195 1.195 0 1 0-1.69-1.689l-.598.599 1.69 1.689Z"></path></svg>
+                                    </span>
+                                </span>
+                            </button>
+                            </div>
+                             <div class="Polaris-ButtonGroup__Item">
+                            <button class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantSecondary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly" aria-label="Add theme" type="button">
+                                <span class="Polaris-Button__Icon">
+                                    <span class="Polaris-Icon">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9519 1.00098H13.0478C13.2297 1.00098 13.4187 1.00098 13.5906 1.03759C13.9299 1.11029 14.2416 1.28976 14.4863 1.5533C14.7309 1.81684 14.8975 2.15261 14.965 2.51815C15 2.70336 14.999 2.90687 14.999 3.10284V12.8972C14.999 13.0931 14.999 13.2967 14.965 13.4819C14.8977 13.8476 14.7312 14.1836 14.4865 14.4473C14.2419 14.7111 13.9301 14.8907 13.5906 14.9635C13.4111 14.9941 13.2294 15.006 13.0478 14.999H12.9519C12.7699 14.999 12.581 14.999 12.4091 14.9624C12.0697 14.8897 11.758 14.7103 11.5134 14.4467C11.2687 14.1832 11.1021 13.8474 11.0346 13.4819C11.0059 13.2886 10.9945 13.0928 11.0006 12.8972V3.10284C11.0006 2.90687 11.0006 2.70336 11.0346 2.51815C11.1021 2.15261 11.2687 1.81684 11.5134 1.5533C11.758 1.28976 12.0697 1.11029 12.4091 1.03759C12.581 0.999903 12.7699 1.00098 12.9519 1.00098ZM12.699 2.62152C12.6512 2.63219 12.6075 2.65764 12.573 2.69476C12.5386 2.73187 12.5149 2.77902 12.505 2.83042L12.502 2.88749C12.5001 2.97648 12.4994 3.06551 12.5 3.15453V12.8455C12.5 12.9758 12.5 13.0544 12.502 13.1125L12.505 13.1696C12.5149 13.221 12.5386 13.2681 12.573 13.3053C12.6075 13.3424 12.6512 13.3678 12.699 13.3785L12.7519 13.3817C12.8069 13.3839 12.8789 13.3839 12.9998 13.3839C13.1208 13.3839 13.1928 13.3839 13.2477 13.3817L13.3007 13.3785C13.3484 13.3678 13.3922 13.3424 13.4266 13.3053C13.4611 13.2681 13.4847 13.221 13.4946 13.1696L13.4976 13.1125C13.4996 13.0235 13.5002 12.9345 13.4996 12.8455V3.15453C13.4998 3.04683 13.4982 2.93913 13.4946 2.83149C13.4849 2.7799 13.4614 2.73252 13.4269 2.6952C13.3924 2.65788 13.3486 2.63226 13.3007 2.62152C13.2008 2.61776 13.1008 2.61597 13.0008 2.61614C12.9002 2.61594 12.7995 2.61774 12.699 2.62152Z" fill="#4A4A4A"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.95185 7.00098H3.04782C3.22974 7.00098 3.41866 7.00098 3.59059 7.03724C3.92993 7.10924 4.24164 7.28698 4.48629 7.54799C4.73094 7.80899 4.89754 8.14153 4.96503 8.50355C5.00002 8.68697 4.99902 8.88852 4.99902 9.08261V12.9174C4.99902 13.1115 4.99902 13.3131 4.96503 13.4965C4.89772 13.8587 4.73119 14.1915 4.48653 14.4527C4.24187 14.7139 3.93007 14.8918 3.59059 14.9639C3.41115 14.9942 3.22938 15.006 3.04782 14.9991H2.95185C2.76993 14.9991 2.58101 14.9991 2.40908 14.9628C2.06974 14.8908 1.75803 14.713 1.51338 14.452C1.26873 14.191 1.10213 13.8585 1.03464 13.4965C1.00586 13.3051 0.994483 13.1112 1.00065 12.9174V9.08261C1.00065 8.88852 1.00065 8.68697 1.03464 8.50355C1.10213 8.14153 1.26873 7.80899 1.51338 7.54799C1.75803 7.28698 2.06974 7.10924 2.40908 7.03724C2.58101 6.99991 2.76993 7.00098 2.95185 7.00098ZM2.69896 8.60593C2.65125 8.61649 2.60747 8.6417 2.57302 8.67845C2.53857 8.71521 2.51494 8.76191 2.50504 8.81281C2.50155 8.91941 2.49988 9.02607 2.50004 9.13273V12.8662C2.49988 12.9729 2.50155 13.0796 2.50504 13.1862C2.51476 13.2373 2.53831 13.2842 2.57278 13.3211C2.60725 13.3581 2.65112 13.3835 2.69896 13.3941L2.75194 13.3973C2.80691 13.3994 2.87888 13.3994 2.99984 13.3994C3.12079 13.3994 3.19276 13.3994 3.24773 13.3973L3.30071 13.3941C3.34842 13.3835 3.3922 13.3583 3.42665 13.3216C3.4611 13.2848 3.48473 13.2381 3.49463 13.1872L3.49763 13.1307C3.49963 13.0731 3.49963 12.9953 3.49963 12.8662V9.1338C3.49979 9.02713 3.49813 8.92048 3.49463 8.81388C3.48491 8.76278 3.46136 8.71585 3.42689 8.67889C3.39242 8.64193 3.34855 8.61656 3.30071 8.60593C3.20079 8.60216 3.10082 8.60038 3.00083 8.60059C2.90019 8.60036 2.79954 8.60213 2.69896 8.60593Z" fill="#4A4A4A"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99984 4.00098H7.95185C7.76993 4.00098 7.58101 4.00098 7.40908 4.0366C7.06974 4.10733 6.75803 4.28194 6.51338 4.53835C6.26873 4.79475 6.10213 5.12143 6.03464 5.47707C6.00586 5.6651 5.99448 5.85561 6.00065 6.04593V12.956C6.00065 13.1467 6.00065 13.3447 6.03464 13.5249C6.10195 13.8807 6.26848 14.2076 6.51314 14.4642C6.7578 14.7208 7.0696 14.8956 7.40908 14.9664C7.58101 15.002 7.76993 15.001 7.95185 15.001H8.04782C8.22974 15.001 8.41866 15.001 8.59059 14.9654C8.92993 14.8946 9.24164 14.72 9.48629 14.4636C9.73094 14.2072 9.89754 13.8805 9.96503 13.5249C10 13.3447 9.99902 13.1477 9.99902 12.956V6.04593C9.99902 5.85526 9.99902 5.65726 9.96503 5.47707C9.89754 5.12143 9.73094 4.79475 9.48629 4.53835C9.24164 4.28194 8.92993 4.10733 8.59059 4.0366C8.41866 3.99993 8.22974 4.00098 8.04782 4.00098H7.99984ZM7.50504 5.78193C7.51476 5.73174 7.53831 5.68563 7.57278 5.64932C7.60725 5.61301 7.65112 5.58809 7.69896 5.57765C7.79888 5.57399 7.89885 5.57224 7.99883 5.57241C8.09948 5.57221 8.20013 5.57396 8.30071 5.57765C8.34842 5.58802 8.3922 5.61279 8.42665 5.64889C8.4611 5.685 8.48473 5.73088 8.49463 5.78088L8.49763 5.83641C8.49963 5.89403 8.49963 5.96945 8.49963 6.09622V12.9057C8.49983 13.0105 8.49816 13.1153 8.49463 13.22C8.48491 13.2702 8.46136 13.3163 8.42689 13.3526C8.39242 13.3889 8.34855 13.4139 8.30071 13.4243L8.24773 13.4275C8.16512 13.4295 8.08247 13.4302 7.99984 13.4295C7.87888 13.4295 7.80691 13.4295 7.75194 13.4275L7.69896 13.4243C7.65125 13.4139 7.60747 13.3892 7.57302 13.3531C7.53857 13.3169 7.51494 13.2711 7.50504 13.2211C7.50155 13.1163 7.49988 13.0116 7.50004 12.9068V6.09726C7.49985 5.99178 7.50152 5.88735 7.50504 5.78193Z" fill="#4A4A4A"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </button>
+                            </div>
+                            </div>
+                  </td>
+               </tr>
+              
+              
+            </tbody>
+         </table>
+      </div>
+      <div class="Polaris-IndexTable__ScrollBarContainer Polaris-IndexTable--scrollBarContainerHidden">
+         <div class="Polaris-IndexTable__ScrollBar" style="--pc-index-table-scroll-bar-content-width: 816px;">
+            <div class="Polaris-IndexTable__ScrollBarContent"></div>
+         </div>
+      </div>
+   </div>
+</div> -->
+                    
+                    <!-- table end -->
+
+                  
+               </div>
+            </div> 
+      </div>
+   </div>
+  </div>
+   <!-- Polaris Modal -->
+   <div id="videoModal" data-portal-id="modal-:customModal:"
+      class="p-theme-light Polaris-ThemeProvider--themeContainer"
+      style="display: none;">
+      <div class="Polaris-Modal-Dialog__Container"
+         style="display: flex; justify-content: center; align-items: center;">
+         <div role="dialog" class="Polaris-Modal-Dialog"
+            style="max-width: 800px; width: 100%;">
+            <div class="Polaris-Modal-Dialog__Modal">
+               <div class="Polaris-Box"
+                  style="padding: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                  <h2 class="Polaris-Text--headingMd">Watch Video</h2>
+                  <button
+                     class="Polaris-Button Polaris-Button--pressable Polaris-Button--variantTertiary Polaris-Button--sizeMedium Polaris-Button--textAlignCenter Polaris-Button--iconOnly"
+                     aria-label="Close" type="button" aria-pressed="false"
+                     onclick="closeVideoModal()">
+                     <span class="Polaris-Button__Icon">
+                        <span class="Polaris-Icon">
+                           <svg viewBox="0 0 20 20" class="Polaris-Icon__Svg"
+                              focusable="false" aria-hidden="true">
+                              <path
+                                 d="M13.97 15.03a.75.75 0 1 0 1.06-1.06l-3.97-3.97 3.97-3.97a.75.75 0 0 0-1.06-1.06l-3.97 3.97-3.97-3.97a.75.75 0 0 0-1.06 1.06l3.97 3.97-3.97 3.97a.75.75 0 1 0 1.06 1.06l3.97-3.97 3.97 3.97Z"></path>
+                           </svg>
+                        </span>
+                     </span>
+                  </button>
+               </div>
+               <div class="Polaris-Modal__Body" style="padding: 0 1rem 1rem;">
+                  <div style="position: relative; padding-top: 56.25%; height: 0;">
+                     <iframe id="videoFrame" src frameborder="0" allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;"></iframe>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="Polaris-Backdrop" onclick="closeVideoModal()"></div>
+   </div>
+</body>
+</html>
+<script>
+// modal js
+ function openVideoModal(videoUrl) {
+    document.getElementById('videoModal').style.display = 'block';
+    document.getElementById('videoFrame').src = videoUrl + '?autoplay=1';
+  }
+
+  function closeVideoModal() {
+    document.getElementById('videoModal').style.display = 'none';
+    document.getElementById('videoFrame').src = ''; // Stop video
+  }
+
+
+  // search box show and hide
+  document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelector(".ws_table_tabs");
+  const searchBox = document.querySelector(".ws_table_search");
+  const searchBtn = document.querySelector(".ws_table_searchBtn button");
+  const cancelBtn = document.querySelector(".ws_table_search .ws_table-searchCancel button");
+
+  function fadeOut(el, cb) {
+    el.style.opacity = "0";
+    setTimeout(() => {
+      el.style.display = "none";
+      if (cb) cb();
+    }, 150);
+  }
+
+  function fadeIn(el) {
+    el.style.display = "block";
+    requestAnimationFrame(() => {
+      el.style.opacity = "1";
+    });
+  }
+
+  // Show search box
+  searchBtn.addEventListener("click", () => {
+    fadeOut(tabs, () => fadeIn(searchBox));
+  });
+
+  // Hide search box
+  cancelBtn.addEventListener("click", () => {
+    fadeOut(searchBox, () => fadeIn(tabs));
+  });
+});
+
+
+// all toggle js
+document.addEventListener("DOMContentLoaded", function () {
+  function setupDropdownToggle(toggleSelector, dropdownSelector) {
+    const toggleBtn = document.querySelector(toggleSelector);
+    const dropdown = document.querySelector(dropdownSelector);
+
+    if (!toggleBtn || !dropdown) return;
+
+    toggleBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent immediate outside close
+      const isOpen = dropdown.classList.contains("Polaris-Popover__PopoverOverlay--open");
+
+      if (isOpen) {
+        closeDropdown(dropdown);
+      } else {
+        openDropdown(dropdown);
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        dropdown.classList.contains("Polaris-Popover__PopoverOverlay--open") &&
+        !dropdown.contains(e.target) &&
+        !toggleBtn.contains(e.target)
+      ) {
+        closeDropdown(dropdown);
+      }
+    });
+  }
+
+  function openDropdown(dropdown) {
+    dropdown.style.display = "block";
+    requestAnimationFrame(() => {
+      dropdown.classList.remove("Polaris-Popover__PopoverOverlay--close");
+      dropdown.classList.add("Polaris-Popover__PopoverOverlay--open");
+      dropdown.style.opacity = "1";
+    });
+  }
+
+  function closeDropdown(dropdown) {
+    dropdown.style.opacity = "0";
+    setTimeout(() => {
+      dropdown.classList.remove("Polaris-Popover__PopoverOverlay--open");
+      dropdown.classList.add("Polaris-Popover__PopoverOverlay--close");
+      dropdown.style.display = "none";
+    }, 150);
+  }
+
+  // ✅ initialize
+  setupDropdownToggle(".ws_toggleAll", ".ws_dropdownAll");
+});
+
+
+
+</script>

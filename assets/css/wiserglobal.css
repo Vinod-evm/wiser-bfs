@@ -1475,6 +1475,7 @@ ul.ws_preview_setting_collapsible {
     width: 90%;
     margin-left: 10%;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .upsell_1,
@@ -1503,15 +1504,32 @@ ul.ws_preview_setting_collapsible {
     display: block;
 }
 
+.upsell_1,
+.upsell_2,
+.upsell_3 {
+    display: none;
+    position: relative;
+}
+
+
+
+.upsell_1_with_product,
+.upsell_2_with_product,
+.upsell_3_with_product {
+    display: block;
+    position: relative;
+}
+
+
 .upsell_desclined::before {
     content: "";
     position: absolute;
     border: 2px solid #DEDEDE;
-    top: -12px;
-    left: -458px;
+    top: -5%;
+    left: -114%;
     right: auto;
-    height: 64px;
-    width: 656px;
+    height: 0;
+    width: 100%;
     border-left: 0;
     border-bottom: 0;
     border-radius: 0 15px 0 0;
@@ -1520,12 +1538,11 @@ ul.ws_preview_setting_collapsible {
 .upsell_row::before {
     content: "";
     position: absolute;
-    left: 75px;
-    top: 238px;
-    height: 215px;
+    left: -30px;
+    top: 38%;
+    height: 25%;
     border: 2px solid #DEDEDE;
-    border-radius: 15px 0 0px 15px;
-    width: 30px;
+    width: 0%;
     border-right: 0;
 }
 
@@ -1534,8 +1551,8 @@ ul.ws_preview_setting_collapsible {
     position: absolute;
     background: #fff;
     border: 2px solid #DEDEDE;
-    left: -5px;
-    top: 64%;
+    left: -6px;
+    top: 50%;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -1548,7 +1565,7 @@ ul.ws_preview_setting_collapsible {
     background: #fff;
     border: 2px solid #DEDEDE;
     left: -6px;
-    top: 65%;
+    top: 50%;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -1561,11 +1578,164 @@ ul.ws_preview_setting_collapsible {
     background: #fff;
     border: 2px solid #DEDEDE;
     left: 47.3%;
-    top: 33%;
+    top: -7%;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     padding: 5px;
+}
+
+.upsell_1_with_product::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: -5px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 999;
+
+}
+
+.upsell_2_with_product::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: -6px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 999;
+
+}
+
+.upsell_3_with_product::before {
+    content: "";
+    position: absolute;
+    background: #fff;
+    border: 2px solid #DEDEDE;
+    left: 47.3%;
+    top: -3%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 999;
+}
+
+.upsell_1_with_product::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 53%;
+    height: 58%;
+    border: 2px solid #DEDEDE;
+    border-radius: 15px 0 0px 15px;
+    width: 7%;
+    border-right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+}
+
+.upsell_2_with_product::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: -7%;
+    height: 62%;
+    border: 2px solid #DEDEDE;
+    border-radius: 15px 0 0px 15px;
+    width: 7%;
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top: 0;
+}
+
+.upsell_1::after {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 55%;
+    height: 85%;
+    border: 2px solid #DEDEDE;
+    border-radius: 15px 0 0px 15px;
+    width: 7%;
+    border-right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 0;
+}
+
+.upsell_2::after {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: -14%;
+    height: 74%;
+    border: 2px solid #DEDEDE;
+    border-radius: 15px 0 0px 15px;
+    width: 7%;
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top: 0;
+}
+
+.upsell_3_with_product::after {
+    content: "";
+    position: absolute;
+    height: 38%;
+    border: 2px solid #DEDEDE;
+    border-radius: 0px 15px 0px 15px;
+    width: 68%;
+    border-bottom: 0;
+    left: -19%;
+    top: -36%;
+    border-left: 0;
+}
+
+.upsell_3::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    border: 2px solid #DEDEDE;
+    border-radius: 0px 15px 0px 15px;
+    width: 68%;
+    border-bottom: 0;
+    left: -19%;
+    top: -76%;
+    border-left: 0;
+}
+
+.ws_media_card {
+    display: flex;
+    align-items: flex-start;
+}
+
+.ws_media_card .Polaris-Thumbnail {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.btn_width_100 {
+    width: 100px;
+}
+
+.btn_width_70 {
+    width: 70px;
+    flex-grow: 1;
+}
+
+.ws_upsell_card_footer {
+    background: #F3F3F3;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
